@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <base target="_top">
+    <meta charset="utf-8">
+    <style><?!= include('Styles'); ?></style>
+  </head>
+  <body>
+    <main class="shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Private review workspace</p>
+          <h1>Coordinate Ledger</h1>
+          <p class="lede">Save every coordinate locally. Push an immutable batch to your Sheet when you are ready.</p>
+        </div>
+        <div class="status-stack">
+          <span id="networkStatus" class="pill">Checking network</span>
+          <a id="gitStatus" class="pill neutral" target="_blank" rel="noopener">Git not configured</a>
+        </div>
+      </header>
+
+      <section class="metrics" aria-label="Ledger summary">
+        <article><span id="pendingCount">0</span><small>Pending</small></article>
+        <article><span id="savedCount">0</span><small>Saved locally</small></article>
+        <article><span id="currentCount">0</span><small>Current in Sheet</small></article>
+      </section>
+
+      <section class="panel editor-panel">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">New event</p>
+            <h2>Record a coordinate</h2>
+          </div>
+          <span id="revisionLabel" class="muted">Revision: loading</span>
+        </div>
+        <form id="coordinateForm">
+          <div class="form-grid identity-grid">
+            <label>Route ID<input id="routeId" required maxlength="160" autocomplete="off"></label>
+            <label>Sequence<input id="sequence" required type="number" min="0" step="1"></label>
+            <label class="wide">Exact stop name<input id="stopName" required maxlength="240" autocomplete="off"></label>
+          </div>
+          <div class="coordinate-groups">
+            <fieldset>
+              <legend>Previous coordinate</legend>
+              <label>Latitude<input id="previousLat" type="number" min="-90" max="90" step="any"></label>
+              <label>Longitude<input id="previousLng" type="number" min="-180" max="180" step="any"></label>
+            </fieldset>
+            <div class="arrow" aria-hidden="true">→</div>
+            <fieldset>
+              <legend>New coordinate</legend>
+              <label>Latitude<input id="newLat" required type="number" min="-90" max="90" step="any"></label>
+              <label>Longitude<input id="newLng" required type="number" min="-180" max="180" step="any"></label>
+            </fieldset>
+          </div>
+          <div class="actions">
+            <button class="primary" type="submit">Save offline</button>
+            <button id="pushButton" class="secondary" type="button">Push pending</button>
+            <button id="reloadButton" class="ghost" type="button">Reload Sheet</button>
+          </div>
+        </form>
+        <p id="message" class="message" role="status" aria-live="polite"></p>
+      </section>
+
+      <section class="panel">
+        <div class="section-heading">
+          <div><p class="eyebrow">Local device</p><h2>Offline queue</h2></div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Status</th><th>Route / stop</th><th>Coordinate</th><th>Saved</th></tr></thead>
+            <tbody id="localRows"></tbody>
+          </table>
+        </div>
+        <p id="localEmpty" class="empty">No coordinate events have been saved on this device.</p>
+      </section>
+
+      <section class="panel">
+        <div class="section-heading">
+          <div><p class="eyebrow">Google Sheet</p><h2>Coordinate history</h2></div>
+          <span class="muted">Restore creates a new event</span>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Route / stop</th><th>Coordinate</th><th>Received</th><th></th></tr></thead>
+            <tbody id="historyRows"></tbody>
+          </table>
+        </div>
+        <p id="historyEmpty" class="empty">No pushed coordinate history yet.</p>
+      </section>
+    </main>
+    <script><?!= include('Client'); ?></script>
+  </body>
+</html>

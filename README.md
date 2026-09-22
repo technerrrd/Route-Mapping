@@ -30,3 +30,7 @@ Candidate points are available across all routes. Any stop that Google Maps coul
 Google Maps review candidates are kept separately in `google-maps-candidates.json`. They are loaded as pending candidates, never as confirmed stops. Lower-confidence entries identify neighborhood centers or representative landmarks and should be checked carefully in the website.
 
 An online build sends unresolved stop names and the configured location context to OpenStreetMap's Nominatim search service. Use `npm run build:offline` when you do not want to send names to an external service.
+
+## Private coordinate ledger
+
+The optional [coordinate ledger setup guide](tools/coordinate-ledger/README.md) explains how to save location changes offline, push their history to a private Google Sheet, and maintain a rolling GitHub pull request. It is a separate owner-only review page; the map above continues to use its existing browser review flow.

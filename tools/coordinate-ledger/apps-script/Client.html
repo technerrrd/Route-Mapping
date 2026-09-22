@@ -1,0 +1,358 @@
+(function () {
+  "use strict";
+
+  var DB_NAME = "coordinate-ledger-v1";
+  var STORE_NAME = "events";
+  var db;
+  var sourceDataRevision = "unversioned";
+  var remoteCurrent = [];
+  var remoteHistory = [];
+
+  function byId(id) { return document.getElementById(id); }
+
+  function openDatabase() {
+    return new Promise(function (resolve, reject) {
+      var request = indexedDB.open(DB_NAME, 1);
+      request.onupgradeneeded = function () {
+        var store = request.result.createObjectStore(STORE_NAME, { keyPath: "eventId" });
+        store.createIndex("syncStatus", "syncStatus", { unique: false });
+        store.createIndex("savedAt", "savedAt", { unique: false });
+      };
+      request.onsuccess = function () { resolve(request.result); };
+      request.onerror = function () { reject(request.error); };
+    });
+  }
+
+  function transact(mode, callback) {
+    return new Promise(function (resolve, reject) {
+      var transaction = db.transaction(STORE_NAME, mode);
+      var store = transaction.objectStore(STORE_NAME);
+      var result;
+      try { result = callback(store); } catch (error) { reject(error); return; }
+      transaction.oncomplete = function () { resolve(result); };
+      transaction.onerror = function () { reject(transaction.error); };
+      transaction.onabort = function () { reject(transaction.error || new Error("IndexedDB transaction aborted.")); };
+    });
+  }
+
+  function getAllEvents() {
+    return new Promise(function (resolve, reject) {
+      var request = db.transaction(STORE_NAME, "readonly").objectStore(STORE_NAME).getAll();
+      request.onsuccess = function () { resolve(request.result.sort(sortBySavedAt)); };
+      request.onerror = function () { reject(request.error); };
+    });
+  }
+
+  function putEvent(event) {
+    return transact("readwrite", function (store) { store.add(event); });
+  }
+
+  async function patchEvents(ids, patch) {
+    var wanted = {};
+    ids.forEach(function (id) { wanted[id] = true; });
+    var events = await getAllEvents();
+    return transact("readwrite", function (store) {
+      events.forEach(function (event) {
+        if (wanted[event.eventId]) store.put(Object.assign({}, event, patch));
+      });
+    });
+  }
+
+  async function resetInterruptedPushes() {
+    var events = await getAllEvents();
+    var ids = events.filter(function (event) { return event.syncStatus === "pushing"; })
+      .map(function (event) { return event.eventId; });
+    if (ids.length) await patchEvents(ids, { syncStatus: "pending" });
+  }
+
+  async function recordSave(input) {
+    var event = normalizeClientEvent(input);
+    validateClientEvent(event);
+    await putEvent(event);
+    await renderLocalEvents();
+    showMessage("Coordinate saved locally. It will remain pending until you push it.", "good");
+    return event;
+  }
+
+  function normalizeClientEvent(input) {
+    return {
+      eventId: uuid(),
+      routeId: String(input.routeId || "").trim(),
+      sequence: Number(input.sequence),
+      stopName: String(input.stopName || "").trim(),
+      previousLat: optionalNumber(input.previousLat),
+      previousLng: optionalNumber(input.previousLng),
+      newLat: Number(input.newLat),
+      newLng: Number(input.newLng),
+      savedAt: new Date().toISOString(),
+      sourceDataRevision: String(input.sourceDataRevision || sourceDataRevision || "unversioned"),
+      syncStatus: "pending",
+      pushedAt: null,
+      batchId: null
+    };
+  }
+
+  function validateClientEvent(event) {
+    if (!event.routeId || !event.stopName) throw new Error("Route ID and exact stop name are required.");
+    if (!Number.isInteger(event.sequence) || event.sequence < 0) throw new Error("Sequence must be a non-negative integer.");
+    if (!validLatitude(event.newLat) || !validLongitude(event.newLng)) throw new Error("The new coordinate is outside the valid latitude/longitude range.");
+    var hasPreviousLat = event.previousLat !== null;
+    var hasPreviousLng = event.previousLng !== null;
+    if (hasPreviousLat !== hasPreviousLng) throw new Error("Supply both previous-coordinate values or leave both empty.");
+    if (hasPreviousLat && (!validLatitude(event.previousLat) || !validLongitude(event.previousLng))) {
+      throw new Error("The previous coordinate is outside the valid latitude/longitude range.");
+    }
+  }
+
+  async function pushPending() {
+    var events = await getAllEvents();
+    var pending = events.filter(function (event) { return event.syncStatus === "pending"; });
+    if (!pending.length) {
+      showMessage("There are no pending coordinates to push.", "warn");
+      return;
+    }
+    var ids = pending.map(function (event) { return event.eventId; });
+    var batchId = uuid();
+    byId("pushButton").disabled = true;
+    await patchEvents(ids, { syncStatus: "pushing", batchId: batchId });
+    await renderLocalEvents();
+    showMessage("Pushing " + pending.length + " coordinate event" + (pending.length === 1 ? "" : "s") + "…", "");
+
+    try {
+      var response = await serverCall("appendCoordinateBatch", {
+        batchId: batchId,
+        events: pending.map(serverEvent)
+      });
+      if (!response.sheetSaved) {
+        await patchEvents(ids, { syncStatus: "pending" });
+        showMessage((response.validationFailures || ["The Sheet rejected the batch."]).join(" "), "bad");
+      } else {
+        var savedIds = (response.acceptedEventIds || []).concat(response.duplicateEventIds || []);
+        await patchEvents(savedIds, {
+          syncStatus: "pushed",
+          pushedAt: new Date().toISOString(),
+          batchId: batchId
+        });
+        showMessage("Saved to Sheet. Git synchronization is now pending.", "good");
+        renderGitStatus(response.gitSync);
+        await loadRemoteLedger();
+      }
+    } catch (error) {
+      await patchEvents(ids, { syncStatus: "pending" });
+      showMessage("Push failed; every event is still pending locally. " + error.message, "bad");
+    } finally {
+      byId("pushButton").disabled = false;
+      await renderLocalEvents();
+    }
+  }
+
+  async function loadRemoteLedger() {
+    try {
+      var result = await serverCall("getLedgerBootstrap");
+      sourceDataRevision = result.sourceDataRevision || "unversioned";
+      remoteCurrent = result.currentCoordinates || [];
+      remoteHistory = result.history || [];
+      byId("revisionLabel").textContent = "Revision: " + sourceDataRevision;
+      byId("currentCount").textContent = remoteCurrent.length;
+      renderHistory();
+      renderGitStatus(result.gitSync);
+    } catch (error) {
+      showMessage("Local saving is available, but the Sheet could not be loaded: " + error.message, "warn");
+    }
+  }
+
+  async function restoreEvent(event) {
+    var latest = await currentCoordinateFor(event.routeId, event.sequence, event.stopName);
+    await recordSave({
+      routeId: event.routeId,
+      sequence: event.sequence,
+      stopName: event.stopName,
+      previousLat: latest ? latest.newLat : null,
+      previousLng: latest ? latest.newLng : null,
+      newLat: event.newLat,
+      newLng: event.newLng,
+      sourceDataRevision: sourceDataRevision
+    });
+    populateForm(event, latest);
+  }
+
+  async function currentCoordinateFor(routeId, sequence, stopName) {
+    var key = coordinateKey(routeId, sequence, stopName);
+    var candidates = remoteCurrent.filter(function (event) { return coordinateKey(event.routeId, event.sequence, event.stopName) === key; });
+    var local = (await getAllEvents()).filter(function (event) { return coordinateKey(event.routeId, event.sequence, event.stopName) === key; });
+    return candidates.concat(local).sort(sortBySavedAt).pop() || null;
+  }
+
+  async function renderLocalEvents() {
+    var events = await getAllEvents();
+    var tbody = byId("localRows");
+    tbody.textContent = "";
+    events.slice().reverse().forEach(function (event) {
+      var row = document.createElement("tr");
+      row.appendChild(cellWithState(event.syncStatus));
+      row.appendChild(identityCell(event));
+      row.appendChild(textCell(formatCoordinate(event.newLat, event.newLng)));
+      row.appendChild(textCell(formatDate(event.savedAt)));
+      tbody.appendChild(row);
+    });
+    var pending = events.filter(function (event) { return event.syncStatus !== "pushed"; }).length;
+    byId("pendingCount").textContent = pending;
+    byId("savedCount").textContent = events.length;
+    byId("localEmpty").hidden = events.length > 0;
+  }
+
+  function renderHistory() {
+    var tbody = byId("historyRows");
+    tbody.textContent = "";
+    remoteHistory.forEach(function (event, index) {
+      var row = document.createElement("tr");
+      row.appendChild(identityCell(event));
+      row.appendChild(textCell(formatCoordinate(event.newLat, event.newLng)));
+      row.appendChild(textCell(formatDate(event.serverReceivedAt)));
+      var actionCell = document.createElement("td");
+      var button = document.createElement("button");
+      button.type = "button";
+      button.className = "restore";
+      button.textContent = "Restore";
+      button.addEventListener("click", function () {
+        restoreEvent(remoteHistory[index]).catch(function (error) { showMessage(error.message, "bad"); });
+      });
+      actionCell.appendChild(button);
+      row.appendChild(actionCell);
+      tbody.appendChild(row);
+    });
+    byId("historyEmpty").hidden = remoteHistory.length > 0;
+  }
+
+  function renderGitStatus(status) {
+    status = status || { status: "not_configured" };
+    var element = byId("gitStatus");
+    element.className = "pill neutral";
+    element.removeAttribute("href");
+    if (status.pullRequestUrl) element.href = status.pullRequestUrl;
+    if (status.status === "synced" || status.status === "up_to_date") {
+      element.textContent = status.pullRequestUrl ? "Git PR updated" : "Git up to date";
+    } else if (status.status === "pending") {
+      element.textContent = "Git sync pending";
+      element.className = "pill warn";
+    } else if (status.status === "failed") {
+      element.textContent = "Git sync failed";
+      element.className = "pill bad";
+      element.title = status.error || "GitHub synchronization failed.";
+    } else {
+      element.textContent = "Git not configured";
+    }
+  }
+
+  function serverCall(method, payload) {
+    return new Promise(function (resolve, reject) {
+      if (!window.google || !google.script || !google.script.run) {
+        reject(new Error("Open the deployed Apps Script web app to use Sheet synchronization."));
+        return;
+      }
+      var runner = google.script.run.withSuccessHandler(resolve).withFailureHandler(function (error) {
+        reject(new Error(error && error.message ? error.message : String(error)));
+      });
+      if (payload === undefined) runner[method](); else runner[method](payload);
+    });
+  }
+
+  function populateForm(event, latest) {
+    byId("routeId").value = event.routeId;
+    byId("sequence").value = event.sequence;
+    byId("stopName").value = event.stopName;
+    byId("previousLat").value = latest ? latest.newLat : "";
+    byId("previousLng").value = latest ? latest.newLng : "";
+    byId("newLat").value = event.newLat;
+    byId("newLng").value = event.newLng;
+  }
+
+  function formInput() {
+    return {
+      routeId: byId("routeId").value,
+      sequence: byId("sequence").value,
+      stopName: byId("stopName").value,
+      previousLat: byId("previousLat").value,
+      previousLng: byId("previousLng").value,
+      newLat: byId("newLat").value,
+      newLng: byId("newLng").value,
+      sourceDataRevision: sourceDataRevision
+    };
+  }
+
+  function serverEvent(event) {
+    return {
+      eventId: event.eventId,
+      routeId: event.routeId,
+      sequence: event.sequence,
+      stopName: event.stopName,
+      previousLat: event.previousLat,
+      previousLng: event.previousLng,
+      newLat: event.newLat,
+      newLng: event.newLng,
+      savedAt: event.savedAt,
+      sourceDataRevision: event.sourceDataRevision
+    };
+  }
+
+  function cellWithState(status) {
+    var cell = document.createElement("td");
+    var badge = document.createElement("span");
+    badge.className = "state " + status;
+    badge.textContent = status === "pushed" ? "Saved to Sheet" : status === "pushing" ? "Pushing" : "Pending";
+    cell.appendChild(badge);
+    return cell;
+  }
+
+  function identityCell(event) {
+    var cell = document.createElement("td");
+    var strong = document.createElement("strong");
+    var small = document.createElement("small");
+    strong.textContent = event.stopName;
+    small.textContent = event.routeId + " · stop " + event.sequence;
+    cell.appendChild(strong); cell.appendChild(small);
+    return cell;
+  }
+
+  function textCell(value) { var cell = document.createElement("td"); cell.textContent = value; return cell; }
+  function optionalNumber(value) { return value === "" || value === null || value === undefined ? null : Number(value); }
+  function validLatitude(value) { return Number.isFinite(value) && value >= -90 && value <= 90; }
+  function validLongitude(value) { return Number.isFinite(value) && value >= -180 && value <= 180; }
+  function coordinateKey(routeId, sequence, stopName) { return routeId + "\u001f" + sequence + "\u001f" + stopName; }
+  function sortBySavedAt(a, b) { return String(a.savedAt).localeCompare(String(b.savedAt)); }
+  function formatCoordinate(lat, lng) { return Number(lat).toFixed(6) + ", " + Number(lng).toFixed(6); }
+  function formatDate(value) { var date = new Date(value); return Number.isFinite(date.getTime()) ? date.toLocaleString() : String(value || ""); }
+  function uuid() { return crypto.randomUUID ? crypto.randomUUID() : Date.now() + "-" + Math.random().toString(16).slice(2); }
+  function showMessage(text, kind) { var el = byId("message"); el.textContent = text; el.className = "message " + (kind || ""); }
+
+  function updateNetworkStatus() {
+    var element = byId("networkStatus");
+    element.textContent = navigator.onLine ? "Online" : "Offline · saving locally";
+    element.className = navigator.onLine ? "pill" : "pill warn";
+  }
+
+  async function initialize() {
+    db = await openDatabase();
+    await resetInterruptedPushes();
+    await renderLocalEvents();
+    updateNetworkStatus();
+    await loadRemoteLedger();
+  }
+
+  byId("coordinateForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+    recordSave(formInput()).catch(function (error) { showMessage(error.message, "bad"); });
+  });
+  byId("pushButton").addEventListener("click", function () { pushPending().catch(function (error) { showMessage(error.message, "bad"); }); });
+  byId("reloadButton").addEventListener("click", loadRemoteLedger);
+  window.addEventListener("online", updateNetworkStatus);
+  window.addEventListener("offline", updateNetworkStatus);
+
+  window.CoordinateLedger = {
+    recordSave: recordSave,
+    pushPending: pushPending,
+    listEvents: getAllEvents
+  };
+
+  initialize().catch(function (error) { showMessage("Initialization failed: " + error.message, "bad"); });
+})();

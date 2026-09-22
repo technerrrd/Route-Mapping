@@ -1,0 +1,12 @@
+{
+  "name": "single-user-coordinate-ledger",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Private Google Apps Script coordinate ledger with an offline IndexedDB queue and rolling GitHub pull request sync.",
+  "scripts": {
+    "test": "node --test tests/*.test.cjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
