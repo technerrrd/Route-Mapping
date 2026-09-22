@@ -1,0 +1,4 @@
+node_modules/
+.route-geocode-cache.json
+.chrome-headless/
+.edge-headless/

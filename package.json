@@ -1,0 +1,16 @@
+{
+  "name": "route-map-gallery",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-routes.mjs",
+    "build:offline": "node scripts/build-routes.mjs --offline",
+    "serve": "node scripts/serve.mjs",
+    "start": "npm run build && npm run serve"
+  },
+  "dependencies": {
+    "leaflet": "^1.9.4",
+    "xlsx": "^0.18.5"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "Dhobi Gatta": {
+    "lat": 27.584059,
+    "lng": 76.6054246,
+    "confidence": "high",
+    "source": "google-maps-review-candidate",
+    "note": "Google Maps place: Dhobi ghatta housing society; confirm the exact pickup corner"
+  },
+  "National Gym": {
+    "lat": 27.5873831,
+    "lng": 76.6073254,
+    "confidence": "high",
+    "source": "google-maps-review-candidate",
+    "note": "Google Maps place: National Gym near the Dhobi Gatta / Budh Vihar route"
+  },
+  "E.W.S Quarter": {
+    "lat": 27.5933577,
+    "lng": 76.6070789,
+    "confidence": "medium",
+    "source": "google-maps-review-candidate",
+    "note": "Google Maps place: Gf 86, Ews Quarter near HKM ITI, Budhvihar; confirm this is the intended pickup area"
+  },
+  "Pragati Hospital": {
+    "lat": 27.5873125,
+    "lng": 76.6133125,
+    "confidence": "high",
+    "source": "google-maps-review-candidate",
+    "note": "Google Maps Pragati Hospital place / plus-code position in Vijay Nagar"
+  },
+  "Budh Vihar Block B I": {
+    "lat": 27.5916647,
+    "lng": 76.6131105,
+    "confidence": "medium-high",
+    "source": "google-maps-review-candidate",
+    "note": "Google Maps place: B Block, Budh Vihar; exact pickup corner still needs confirmation"
+  },
+  "Budh Vihar Block E I": {
+    "lat": 27.5966568,
+    "lng": 76.6089605,
+    "confidence": "medium-high",
+    "source": "google-maps-review-candidate",
+    "note": "Google Maps place: E-94, Budh Vihar; representative E Block point, so confirm the pickup corner"
+  },
+  "PATRAKAR COLONY (BEHIND RAJA BHARTHARI PANORMA)": {
+    "lat": 27.6014625,
+    "lng": 76.6122969,
+    "confidence": "high",
+    "source": "google-maps-review-candidate",
+    "note": "Google Maps Raja Bharthari Panorama plus-code position in Patrakar Colony"
+  },
+  "Rath Nagar I": {
+    "lat": 27.6020084,
+    "lng": 76.6172243,
+    "confidence": "high",
+    "source": "google-maps-review-candidate",
+    "note": "Google Maps place: Rath Nagar, Dholidub"
+  },
+  "V.L Memorial Public School": {
+    "lat": 27.6252383,
+    "lng": 76.6070767,
+    "confidence": "high",
+    "source": "google-maps-review-candidate",
+    "note": "Google Maps place: V.L. Memorial Public School, Alwar"
+  }
+}

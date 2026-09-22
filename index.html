@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Interactive route maps generated from Route Excel files." />
+    <title>Route Map Gallery</title>
+    <link rel="preconnect" href="https://tile.openstreetmap.org" />
+    <link rel="stylesheet" href="vendor/leaflet/leaflet.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Transport overview</p>
+          <h1>Route map gallery</h1>
+        </div>
+        <div class="topbar-actions">
+          <button class="export-button" id="exportReview" type="button">Export review</button>
+          <div class="route-picker" id="routePicker" aria-label="Choose a route"></div>
+        </div>
+      </header>
+
+      <section class="map-panel" aria-label="Selected route map">
+        <div class="route-summary">
+          <div>
+            <span class="summary-label">Selected route</span>
+            <strong id="routeTitle">Loading routes…</strong>
+          </div>
+          <div class="summary-stats" id="routeStats"></div>
+        </div>
+        <div id="map" role="application" aria-label="Map with route stops"></div>
+        <div class="map-message" id="mapMessage" hidden></div>
+        <div class="stop-rail-wrap">
+          <button class="rail-button" id="previousStop" aria-label="Previous stop">‹</button>
+          <div class="stop-rail" id="stopRail" tabindex="0"></div>
+          <button class="rail-button" id="nextStop" aria-label="Next stop">›</button>
+        </div>
+      </section>
+
+      <section class="details-panel">
+        <div>
+          <p class="eyebrow">Schedule</p>
+          <h2 id="scheduleTitle">Route stops</h2>
+        </div>
+        <div class="schedule-table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Stop</th>
+                <th scope="col">Pickup</th>
+                <th scope="col">Drop</th>
+                <th scope="col">Candidate</th>
+                <th scope="col">Confidence</th>
+                <th scope="col">Decision</th>
+              </tr>
+            </thead>
+            <tbody id="scheduleBody"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script src="vendor/leaflet/leaflet.js"></script>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

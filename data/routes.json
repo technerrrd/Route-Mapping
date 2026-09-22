@@ -1,0 +1,1659 @@
+[
+  {
+    "id": "route-1",
+    "name": "Route-1",
+    "sourceFile": "Route-1.xls",
+    "stops": [
+      {
+        "sequence": 1,
+        "stopName": "D-Block Shalimar",
+        "pickupTime": "06:30",
+        "dropTime": "14:15",
+        "lat": 27.6074579,
+        "lng": 76.6309627,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "medium",
+        "locationNote": "Google Maps candidate: Apna Ghar Shalimar Extension"
+      },
+      {
+        "sequence": 2,
+        "stopName": "C-Block Shalimar",
+        "pickupTime": "06:32",
+        "dropTime": "14:11",
+        "lat": 27.610729,
+        "lng": 76.62181,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps candidate: C Block, Apna Ghar Shalimar Extension"
+      },
+      {
+        "sequence": 3,
+        "stopName": "Shalimar Yojna",
+        "pickupTime": "06:34",
+        "dropTime": "00:00",
+        "lat": 27.6071823,
+        "lng": 76.6194803,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps candidate: Shalimar Yojana Power House"
+      },
+      {
+        "sequence": 4,
+        "stopName": "30 beegha",
+        "pickupTime": "06:36",
+        "dropTime": "14:07",
+        "lat": 27.6097296,
+        "lng": 76.6237858,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps candidate: 30 Bigha main gate / Ram Mandir"
+      },
+      {
+        "sequence": 6,
+        "stopName": "14 Beegha",
+        "pickupTime": "06:41",
+        "dropTime": "14:05",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 7,
+        "stopName": "AGS Green",
+        "pickupTime": "06:47",
+        "dropTime": "13:59",
+        "lat": 27.6103125,
+        "lng": 76.6301875,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps plus-code candidate for AGS Greens"
+      },
+      {
+        "sequence": 8,
+        "stopName": "Bhakti Ram Mandir",
+        "pickupTime": "06:50",
+        "dropTime": "13:56",
+        "lat": 27.6131969,
+        "lng": 76.6197373,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "medium",
+        "locationNote": "Google Maps candidate: Ram Mandir Alwar"
+      },
+      {
+        "sequence": 9,
+        "stopName": "G+2 Near Mandir",
+        "pickupTime": "06:51",
+        "dropTime": "13:53",
+        "lat": 27.6131969,
+        "lng": 76.6197373,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "low",
+        "locationNote": "Representative Google Maps Ram Mandir point; exact G+2 pickup needs confirmation"
+      },
+      {
+        "sequence": 10,
+        "stopName": "GAUSHALA ROAD",
+        "pickupTime": "06:55",
+        "dropTime": "00:00",
+        "lat": 27.6071527,
+        "lng": 76.6367329,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps candidate: Gokul Goshala Road"
+      },
+      {
+        "sequence": 11,
+        "stopName": "VIGYAN NAGAR 1",
+        "pickupTime": "07:05",
+        "dropTime": "00:00",
+        "lat": 27.5974375,
+        "lng": 76.6370625,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "medium",
+        "locationNote": "Google Maps plus-code center for Vigyan Nagar"
+      },
+      {
+        "sequence": 12,
+        "stopName": "VIGYAN NAGAR 2",
+        "pickupTime": "07:07",
+        "dropTime": "00:00",
+        "lat": 27.5974375,
+        "lng": 76.6370625,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "low",
+        "locationNote": "Google Maps Vigyan Nagar center; exact second stop needs confirmation"
+      },
+      {
+        "sequence": 13,
+        "stopName": "Chakki Wali Gali",
+        "pickupTime": "07:15",
+        "dropTime": "00:00",
+        "lat": 27.5942903,
+        "lng": 76.6218722,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "low",
+        "locationNote": "Google Maps candidate: Gopi Atta Chakki; verify the intended lane"
+      },
+      {
+        "sequence": 14,
+        "stopName": "Katoriwala/Nursing College",
+        "pickupTime": "07:10",
+        "dropTime": "13:50",
+        "lat": 27.5955503,
+        "lng": 76.6284461,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "medium",
+        "locationNote": "Google Maps candidate: Alwar/Sai Nursing College"
+      },
+      {
+        "sequence": 15,
+        "stopName": "Near Railway Line Vigyan Nagar",
+        "pickupTime": "07:14",
+        "dropTime": "13:44",
+        "lat": 27.5974375,
+        "lng": 76.6370625,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "low",
+        "locationNote": "Google Maps Vigyan Nagar center; railway-side pickup needs confirmation"
+      },
+      {
+        "sequence": 16,
+        "stopName": "V.L Memorial Public School",
+        "pickupTime": "",
+        "dropTime": "",
+        "lat": 27.6252383,
+        "lng": 76.6070767,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: V.L. Memorial Public School, Alwar"
+      }
+    ]
+  },
+  {
+    "id": "route-2",
+    "name": "Route-2",
+    "sourceFile": "Route-2.xls",
+    "stops": [
+      {
+        "sequence": 1,
+        "stopName": "Subhash Chowk",
+        "pickupTime": "06:47",
+        "dropTime": "14:13",
+        "lat": 27.5712378,
+        "lng": 76.6234459,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: Subhash Chowk, Medical Colony"
+      },
+      {
+        "sequence": 1,
+        "stopName": "Multan Nagar",
+        "pickupTime": "06:49",
+        "dropTime": "14:11",
+        "lat": 27.5508509,
+        "lng": 76.6469119,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "low",
+        "locationNote": "Google Maps Multan Nagar candidate shared with the second stop"
+      },
+      {
+        "sequence": 2,
+        "stopName": "Multan Nagar-II",
+        "pickupTime": "06:50",
+        "dropTime": "14:10",
+        "lat": 27.5508509,
+        "lng": 76.6469119,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: Multan Nagar, Alwar"
+      },
+      {
+        "sequence": 3,
+        "stopName": "V.L Memorial Public School",
+        "pickupTime": "",
+        "dropTime": "",
+        "lat": 27.6252383,
+        "lng": 76.6070767,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: V.L. Memorial Public School, Alwar"
+      }
+    ]
+  },
+  {
+    "id": "route-3",
+    "name": "Route-3",
+    "sourceFile": "Route-3.xls",
+    "stops": [
+      {
+        "sequence": 1,
+        "stopName": "Dhobi Gatta",
+        "pickupTime": "06:56",
+        "dropTime": "14:04",
+        "lat": 27.584059,
+        "lng": 76.6054246,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: Dhobi ghatta housing society; confirm the exact pickup corner"
+      },
+      {
+        "sequence": 1,
+        "stopName": "National Gym",
+        "pickupTime": "07:00",
+        "dropTime": "14:00",
+        "lat": 27.5873831,
+        "lng": 76.6073254,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: National Gym near the Dhobi Gatta / Budh Vihar route"
+      },
+      {
+        "sequence": 2,
+        "stopName": "E.W.S Quarter",
+        "pickupTime": "07:02",
+        "dropTime": "13:58",
+        "lat": 27.5933577,
+        "lng": 76.6070789,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "medium",
+        "locationNote": "Google Maps place: Gf 86, Ews Quarter near HKM ITI, Budhvihar; confirm this is the intended pickup area"
+      },
+      {
+        "sequence": 3,
+        "stopName": "Pragati Hospital",
+        "pickupTime": "07:07",
+        "dropTime": "13:53",
+        "lat": 27.5873125,
+        "lng": 76.6133125,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps Pragati Hospital place / plus-code position in Vijay Nagar"
+      },
+      {
+        "sequence": 4,
+        "stopName": "Budh Vihar Block B I",
+        "pickupTime": "07:09",
+        "dropTime": "13:51",
+        "lat": 27.5916647,
+        "lng": 76.6131105,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "medium-high",
+        "locationNote": "Google Maps place: B Block, Budh Vihar; exact pickup corner still needs confirmation"
+      },
+      {
+        "sequence": 6,
+        "stopName": "Budh Vihar Block E I",
+        "pickupTime": "07:15",
+        "dropTime": "13:45",
+        "lat": 27.5966568,
+        "lng": 76.6089605,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "medium-high",
+        "locationNote": "Google Maps place: E-94, Budh Vihar; representative E Block point, so confirm the pickup corner"
+      },
+      {
+        "sequence": 6,
+        "stopName": "PATRAKAR COLONY (BEHIND RAJA BHARTHARI PANORMA)",
+        "pickupTime": "07:19",
+        "dropTime": "13:41",
+        "lat": 27.6014625,
+        "lng": 76.6122969,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps Raja Bharthari Panorama plus-code position in Patrakar Colony"
+      },
+      {
+        "sequence": 7,
+        "stopName": "Rath Nagar I",
+        "pickupTime": "07:21",
+        "dropTime": "13:40",
+        "lat": 27.6020084,
+        "lng": 76.6172243,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: Rath Nagar, Dholidub"
+      },
+      {
+        "sequence": 8,
+        "stopName": "V.L Memorial Public School",
+        "pickupTime": "",
+        "dropTime": "",
+        "lat": 27.6252383,
+        "lng": 76.6070767,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: V.L. Memorial Public School, Alwar"
+      }
+    ]
+  },
+  {
+    "id": "route-4",
+    "name": "Route-4",
+    "sourceFile": "Route-4.xls",
+    "stops": [
+      {
+        "sequence": 1,
+        "stopName": "Near KGB Petrol Pump",
+        "pickupTime": "06:35",
+        "dropTime": "14:35",
+        "lat": 27.5707157,
+        "lng": 76.6822288,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "low",
+        "locationNote": "Google Maps search result near KGB Petrol Pump; pump identity needs confirmation"
+      },
+      {
+        "sequence": 1,
+        "stopName": "YES BANK",
+        "pickupTime": "06:35",
+        "dropTime": "14:25",
+        "lat": 27.5692667,
+        "lng": 76.6141423,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "low",
+        "locationNote": "Google Maps YES Bank result; branch must be confirmed"
+      },
+      {
+        "sequence": 2,
+        "stopName": "IOB,40ft Road",
+        "pickupTime": "06:36",
+        "dropTime": "14:32",
+        "lat": 27.8008125,
+        "lng": 76.6448125,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps plus-code for Indian Overseas Bank, 40 Feet Road, Khairthal"
+      },
+      {
+        "sequence": 3,
+        "stopName": "Pooja Classy Store",
+        "pickupTime": "06:36",
+        "dropTime": "14:30",
+        "lat": 27.8011407,
+        "lng": 76.6453883,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: Pooja Classy Jewels, Khairthal"
+      },
+      {
+        "sequence": 4,
+        "stopName": "CHACHA BAKERS",
+        "pickupTime": "06:38",
+        "dropTime": "14:28",
+        "lat": 27.8016875,
+        "lng": 76.6439375,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps plus-code for Chacha Bakers, Anand Nagar, Khairthal"
+      },
+      {
+        "sequence": 5,
+        "stopName": "Near Under Bridge, Anand Nagar Colony",
+        "pickupTime": "06:40",
+        "dropTime": "14:25",
+        "lat": 27.8008125,
+        "lng": 76.6448125,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "low",
+        "locationNote": "Representative Google Maps Anand Nagar, Khairthal point; under-bridge pickup needs confirmation"
+      },
+      {
+        "sequence": 6,
+        "stopName": "Mandi Bypass",
+        "pickupTime": "06:43",
+        "dropTime": "14:22",
+        "lat": 27.588814,
+        "lng": 76.621002,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "medium",
+        "locationNote": "Google Maps candidate: Alwar Bypass Cabin"
+      },
+      {
+        "sequence": 7,
+        "stopName": "Jio Store, Mator Road",
+        "pickupTime": "06:45",
+        "dropTime": "14:20",
+        "lat": 27.5487691,
+        "lng": 76.6563624,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "medium",
+        "locationNote": "Google Maps candidate: Jio Store, Diwakari"
+      },
+      {
+        "sequence": 8,
+        "stopName": "Papa Mummy Store,Mator Road",
+        "pickupTime": "06:45",
+        "dropTime": "14:20",
+        "lat": 27.8011875,
+        "lng": 76.6441875,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps plus-code for Papa Mummy Store, Khairthal"
+      },
+      {
+        "sequence": 9,
+        "stopName": "Near EP School",
+        "pickupTime": "06:48",
+        "dropTime": "14:17",
+        "lat": 27.5406078,
+        "lng": 76.600828,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "low",
+        "locationNote": "Google Maps candidate: New Era Public School; verify EP School identity"
+      },
+      {
+        "sequence": 10,
+        "stopName": "Vallabhgram",
+        "pickupTime": "06:50",
+        "dropTime": "14:15",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 11,
+        "stopName": "Siwana Underpass",
+        "pickupTime": "06:55",
+        "dropTime": "14:10",
+        "lat": 27.7516477,
+        "lng": 76.6392346,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: Siwana Underpass"
+      },
+      {
+        "sequence": 12,
+        "stopName": "V.L Memorial Public School",
+        "pickupTime": "",
+        "dropTime": "",
+        "lat": 27.6252383,
+        "lng": 76.6070767,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: V.L. Memorial Public School, Alwar"
+      }
+    ]
+  },
+  {
+    "id": "route-5",
+    "name": "Route-5",
+    "sourceFile": "Route-5.xls",
+    "stops": [
+      {
+        "sequence": 1,
+        "stopName": "Vaishali Nagar",
+        "pickupTime": "06:40",
+        "dropTime": "14:20",
+        "lat": 27.5491144,
+        "lng": 76.6492128,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: Vaishali Nagar, Kherado"
+      },
+      {
+        "sequence": 2,
+        "stopName": "Ambedkar Nagar L Block",
+        "pickupTime": "06:45",
+        "dropTime": "14:15",
+        "lat": 27.5369937,
+        "lng": 76.6362087,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: Ambedkar Nagar Park, Block L"
+      },
+      {
+        "sequence": 3,
+        "stopName": "Laxmi Nagar,Hanuman Circle Road",
+        "pickupTime": "06:40",
+        "dropTime": "14:20",
+        "lat": 27.5546716,
+        "lng": 76.6405915,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "medium",
+        "locationNote": "Google Maps Hanuman Circle Park candidate"
+      },
+      {
+        "sequence": 4,
+        "stopName": "Hanuman Circle",
+        "pickupTime": "06:42",
+        "dropTime": "14:18",
+        "lat": 27.5547015,
+        "lng": 76.6405419,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: Hanuman Circle"
+      },
+      {
+        "sequence": 5,
+        "stopName": "Near White Tank,Agrasen Circle Road",
+        "pickupTime": "06:48",
+        "dropTime": "14:12",
+        "lat": 27.5663987,
+        "lng": 76.6260811,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "low",
+        "locationNote": "Google Maps candidate: Maharaj Agrasen Circle; white-tank pickup needs confirmation"
+      },
+      {
+        "sequence": 6,
+        "stopName": "Ganpati Corner",
+        "pickupTime": "06:50",
+        "dropTime": "14:10",
+        "lat": 27.5661875,
+        "lng": 76.6384375,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "medium",
+        "locationNote": "Google Maps plus-code area for Ganpati Corner, 160 Feet Road"
+      },
+      {
+        "sequence": 7,
+        "stopName": "60 Feet Road I",
+        "pickupTime": "06:55",
+        "dropTime": "14:05",
+        "lat": 27.5748377,
+        "lng": 76.6361093,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: 60 Feet Road"
+      },
+      {
+        "sequence": 8,
+        "stopName": "South Street Restaurant Scheme 2",
+        "pickupTime": "07:05",
+        "dropTime": "13:55",
+        "lat": 27.5683125,
+        "lng": 76.6179375,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps plus-code for South Street"
+      },
+      {
+        "sequence": 9,
+        "stopName": "Scheme-2 kwality Bakery",
+        "pickupTime": "07:06",
+        "dropTime": "13:54",
+        "lat": 27.5770881,
+        "lng": 76.6324975,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "medium",
+        "locationNote": "Google Maps Kwality Bakery candidate; branch needs confirmation"
+      },
+      {
+        "sequence": 10,
+        "stopName": "Sanskar Shop,Ambedkar circle Road",
+        "pickupTime": "07:08",
+        "dropTime": "13:51",
+        "lat": 27.5758125,
+        "lng": 76.6146875,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps plus-code for Sanskar Gift Store"
+      },
+      {
+        "sequence": 11,
+        "stopName": "Sahab Johra, Main Road",
+        "pickupTime": "07:10",
+        "dropTime": "13:50",
+        "lat": 27.5841788,
+        "lng": 76.6175456,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: Sahab Johra Road"
+      },
+      {
+        "sequence": 12,
+        "stopName": "kotak Mahindra Bank, Main Road",
+        "pickupTime": "07:12",
+        "dropTime": "13:48",
+        "lat": 27.5864731,
+        "lng": 76.615043,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "medium",
+        "locationNote": "Google Maps Kotak Mahindra Bank candidate; branch needs confirmation"
+      },
+      {
+        "sequence": 13,
+        "stopName": "PNB Bank, Berhu Baksh",
+        "pickupTime": "07:15",
+        "dropTime": "13:45",
+        "lat": 27.5659997,
+        "lng": 76.6098834,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "medium",
+        "locationNote": "Google Maps Punjab National Bank candidate; branch needs confirmation"
+      },
+      {
+        "sequence": 14,
+        "stopName": "V.L Memorial Public School",
+        "pickupTime": "",
+        "dropTime": "",
+        "lat": 27.6252383,
+        "lng": 76.6070767,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: V.L. Memorial Public School, Alwar"
+      }
+    ]
+  },
+  {
+    "id": "route-6",
+    "name": "Route-6",
+    "sourceFile": "Route-6.xls",
+    "stops": [
+      {
+        "sequence": 1,
+        "stopName": "Ghodapher Circle",
+        "pickupTime": "06:45",
+        "dropTime": "14:15",
+        "lat": 27.5563725,
+        "lng": 76.5934262,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: Ghodapher Circle"
+      },
+      {
+        "sequence": 1,
+        "stopName": "Manu marg",
+        "pickupTime": "06:48",
+        "dropTime": "14:12",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 2,
+        "stopName": "MANNI KA BARH",
+        "pickupTime": "06:52",
+        "dropTime": "14:09",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 3,
+        "stopName": "Church Road",
+        "pickupTime": "06:53",
+        "dropTime": "14:08",
+        "lat": 27.565214,
+        "lng": 76.6058475,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: Church Road"
+      },
+      {
+        "sequence": 4,
+        "stopName": "Ghanta Ghar Circle",
+        "pickupTime": "06:55",
+        "dropTime": "14:07",
+        "lat": 27.5673125,
+        "lng": 76.6050625,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps plus-code for Clock Tower / Ghanta Ghar"
+      },
+      {
+        "sequence": 5,
+        "stopName": "Swarg Road",
+        "pickupTime": "06:58",
+        "dropTime": "14:05",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 6,
+        "stopName": "Adarsh Vidhya School",
+        "pickupTime": "06:58",
+        "dropTime": "14:05",
+        "lat": 27.5708142,
+        "lng": 76.6196585,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps candidate: Adarsh Vidhya Mandir School"
+      },
+      {
+        "sequence": 7,
+        "stopName": "Gulati Opticals Kashiram",
+        "pickupTime": "07:00",
+        "dropTime": "14:01",
+        "lat": 27.5668645,
+        "lng": 76.6132305,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "medium",
+        "locationNote": "Google Maps place: Gulati Opticals"
+      },
+      {
+        "sequence": 8,
+        "stopName": "Mev Boarding(Road Number 2)",
+        "pickupTime": "07:02",
+        "dropTime": "14:00",
+        "lat": 27.5529375,
+        "lng": 76.6345625,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "medium",
+        "locationNote": "Google Maps plus-code area for Mev Alwar"
+      },
+      {
+        "sequence": 9,
+        "stopName": "Scheme No. 1",
+        "pickupTime": "07:03",
+        "dropTime": "13:58",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 13,
+        "stopName": "Scheme No. 10 I Stop",
+        "pickupTime": "07:10",
+        "dropTime": "13:55",
+        "lat": 27.5751016,
+        "lng": 76.6091313,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "medium",
+        "locationNote": "Google Maps place: Scheme Number 10"
+      },
+      {
+        "sequence": 14,
+        "stopName": "V.L Memorial Public School",
+        "pickupTime": "",
+        "dropTime": "",
+        "lat": 27.6252383,
+        "lng": 76.6070767,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: V.L. Memorial Public School, Alwar"
+      }
+    ]
+  },
+  {
+    "id": "route-7",
+    "name": "Route-7",
+    "sourceFile": "Route-7.xls",
+    "stops": [
+      {
+        "sequence": 1,
+        "stopName": "kacheri Mod",
+        "pickupTime": "06:40",
+        "dropTime": "14:20",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 1,
+        "stopName": "Ashoka Talkies-II",
+        "pickupTime": "06:45",
+        "dropTime": "14:15",
+        "lat": 27.5636273,
+        "lng": 76.6044612,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "medium",
+        "locationNote": "Google Maps Ashoka landmark candidate; confirm former talkies pickup"
+      },
+      {
+        "sequence": 2,
+        "stopName": "RR Circle",
+        "pickupTime": "06:52",
+        "dropTime": "14:08",
+        "lat": 27.5555898,
+        "lng": 76.616703,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: R R College Circle"
+      },
+      {
+        "sequence": 3,
+        "stopName": "Aravali Hotel",
+        "pickupTime": "06:54",
+        "dropTime": "14:06",
+        "lat": 27.5569375,
+        "lng": 76.6205625,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps plus-code for Hotel Aravali near railway station"
+      },
+      {
+        "sequence": 4,
+        "stopName": "Railway Station",
+        "pickupTime": "06:56",
+        "dropTime": "14:04",
+        "lat": 27.5604521,
+        "lng": 76.6211988,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: Alwar Railway Station"
+      },
+      {
+        "sequence": 5,
+        "stopName": "Old Station Road",
+        "pickupTime": "06:58",
+        "dropTime": "14:00",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 6,
+        "stopName": "Jal ka kuan,Barf Khana Road",
+        "pickupTime": "07:00",
+        "dropTime": "13:58",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 7,
+        "stopName": "Mahawar dharamshala",
+        "pickupTime": "07:01",
+        "dropTime": "13:55",
+        "lat": 27.5604375,
+        "lng": 76.6165625,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "medium",
+        "locationNote": "Google Maps plus-code area for Mahawar Dharamshala"
+      },
+      {
+        "sequence": 8,
+        "stopName": "Hyundai Showroom Main road(temple)",
+        "pickupTime": "07:08",
+        "dropTime": "13:52",
+        "lat": 27.5643125,
+        "lng": 76.6169375,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps plus-code for Modern Hyundai, Station Road"
+      },
+      {
+        "sequence": 9,
+        "stopName": "Jubli Bass Circle",
+        "pickupTime": "07:05",
+        "dropTime": "13:50",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 10,
+        "stopName": "Aerodrum Road",
+        "pickupTime": "07:06",
+        "dropTime": "13:49",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 11,
+        "stopName": "Karamchari Colony I",
+        "pickupTime": "07:08",
+        "dropTime": "13:47",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 12,
+        "stopName": "Shivaji Park (Near Railway Line)",
+        "pickupTime": "07:10",
+        "dropTime": "13:45",
+        "lat": 27.5898582,
+        "lng": 76.6167212,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "medium",
+        "locationNote": "Google Maps Shivaji Park candidate near the railway line"
+      },
+      {
+        "sequence": 13,
+        "stopName": "Shivaji Park, Tempo Stand",
+        "pickupTime": "07:10",
+        "dropTime": "13:45",
+        "lat": 27.5898582,
+        "lng": 76.6167212,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "low",
+        "locationNote": "Representative Google Maps Shivaji Park point; tempo stand needs confirmation"
+      },
+      {
+        "sequence": 14,
+        "stopName": "Near Arya Kanya,Hasan Khan",
+        "pickupTime": "07:12",
+        "dropTime": "13:43",
+        "lat": 27.5952473,
+        "lng": 76.6195962,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: Arya Balika School, Hasan Khan Mewati Nagar"
+      },
+      {
+        "sequence": 15,
+        "stopName": "Near Scottish School",
+        "pickupTime": "07:14",
+        "dropTime": "13:41",
+        "lat": 27.5984375,
+        "lng": 76.6161875,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "medium",
+        "locationNote": "Google Maps plus-code area for The Scottish School"
+      },
+      {
+        "sequence": 16,
+        "stopName": "V.L Memorial Public School",
+        "pickupTime": "",
+        "dropTime": "",
+        "lat": 27.6252383,
+        "lng": 76.6070767,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: V.L. Memorial Public School, Alwar"
+      }
+    ]
+  },
+  {
+    "id": "route-8",
+    "name": "Route-8",
+    "sourceFile": "Route-8.xls",
+    "stops": [
+      {
+        "sequence": 1,
+        "stopName": "Veer Savarkar Nagar",
+        "pickupTime": "07:05",
+        "dropTime": "13:55",
+        "lat": 27.5860625,
+        "lng": 76.6181875,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps plus-code for Veer Savarkar Nagar"
+      },
+      {
+        "sequence": 1,
+        "stopName": "Homepathy College Road",
+        "pickupTime": "07:06",
+        "dropTime": "13:54",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 2,
+        "stopName": "happy medical",
+        "pickupTime": "07:07",
+        "dropTime": "13:53",
+        "lat": 27.5889811,
+        "lng": 76.6185442,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps local result: Happy Medicals"
+      },
+      {
+        "sequence": 3,
+        "stopName": "Govindam Ice cream",
+        "pickupTime": "07:10",
+        "dropTime": "13:54",
+        "lat": 27.5900625,
+        "lng": 76.6183125,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps plus-code for Govindam Ice Cream, Shivaji Park"
+      },
+      {
+        "sequence": 4,
+        "stopName": "Ramlila Maidan, Shivaji Park",
+        "pickupTime": "07:12",
+        "dropTime": "13:54",
+        "lat": 27.5895625,
+        "lng": 76.6170625,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps plus-code area for Ramleela Ground"
+      },
+      {
+        "sequence": 5,
+        "stopName": "Ham Tum Collections,Shivaji Park",
+        "pickupTime": "07:13",
+        "dropTime": "13:50",
+        "lat": 27.5898125,
+        "lng": 76.6160625,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps plus-code for Hum Tum Collection"
+      },
+      {
+        "sequence": 6,
+        "stopName": "Om Electronics,Shivaji Park",
+        "pickupTime": "07:13",
+        "dropTime": "13:52",
+        "lat": 27.5898125,
+        "lng": 76.6150625,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps plus-code for Om Electricals"
+      },
+      {
+        "sequence": 7,
+        "stopName": "Hasan Khan Mewat Nagar",
+        "pickupTime": "07:18",
+        "dropTime": "13:48",
+        "lat": 27.5956161,
+        "lng": 76.6167212,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: Hasan Khan Mewati Nagar"
+      },
+      {
+        "sequence": 8,
+        "stopName": "Near K.V.M School,Rath Nagar",
+        "pickupTime": "07:24",
+        "dropTime": "13:37",
+        "lat": 27.6051209,
+        "lng": 76.6126028,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "medium",
+        "locationNote": "Google Maps KVM Public School candidate"
+      },
+      {
+        "sequence": 9,
+        "stopName": "RTO Office,Dholidub",
+        "pickupTime": "07:26",
+        "dropTime": "13:40",
+        "lat": 27.617487,
+        "lng": 76.6045117,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: RTO Office Alwar"
+      },
+      {
+        "sequence": 10,
+        "stopName": "V.L Memorial Public School",
+        "pickupTime": "",
+        "dropTime": "",
+        "lat": 27.6252383,
+        "lng": 76.6070767,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: V.L. Memorial Public School, Alwar"
+      }
+    ]
+  },
+  {
+    "id": "route-9",
+    "name": "Route-9",
+    "sourceFile": "Route-9.xls",
+    "stops": [
+      {
+        "sequence": 1,
+        "stopName": "Malviya Nagar I stop",
+        "pickupTime": "06:42",
+        "dropTime": "14:18",
+        "lat": 27.5314242,
+        "lng": 76.6080554,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps Malviya Nagar candidate"
+      },
+      {
+        "sequence": 1,
+        "stopName": "Kala Kuan Stop I",
+        "pickupTime": "06:54",
+        "dropTime": "14:06",
+        "lat": 27.544196,
+        "lng": 76.5989958,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: Kala Kuan Tempo Stand"
+      },
+      {
+        "sequence": 2,
+        "stopName": "Nangli Circle",
+        "pickupTime": "07:02",
+        "dropTime": "13:58",
+        "lat": 27.5583796,
+        "lng": 76.6123282,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: Nagli Circle"
+      },
+      {
+        "sequence": 3,
+        "stopName": "Atta mandir",
+        "pickupTime": "07:03",
+        "dropTime": "13:57",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 4,
+        "stopName": "Bhagat Singh Circle",
+        "pickupTime": "07:05",
+        "dropTime": "13:55",
+        "lat": 27.5676345,
+        "lng": 76.6135025,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: Bhagat Singh Circle"
+      },
+      {
+        "sequence": 5,
+        "stopName": "Vijay Nagar II",
+        "pickupTime": "07:11",
+        "dropTime": "13:49",
+        "lat": 27.5835358,
+        "lng": 76.6109441,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "low",
+        "locationNote": "Representative Google Maps Vijay Nagar point; second stop needs confirmation"
+      },
+      {
+        "sequence": 6,
+        "stopName": "Vijay Nagar III",
+        "pickupTime": "07:12",
+        "dropTime": "13:48",
+        "lat": 27.5835358,
+        "lng": 76.6109441,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: Vijay Nagar"
+      },
+      {
+        "sequence": 6,
+        "stopName": "National College",
+        "pickupTime": "07:13",
+        "dropTime": "13:47",
+        "lat": 27.5986258,
+        "lng": 76.610217,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "medium",
+        "locationNote": "Google Maps candidate: National T.T. College for Girls; verify college identity"
+      },
+      {
+        "sequence": 7,
+        "stopName": "Vlm Kids",
+        "pickupTime": "07:14",
+        "dropTime": "13:47",
+        "lat": 27.5874375,
+        "lng": 76.6098125,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps plus-code for VLM Kids School"
+      },
+      {
+        "sequence": 8,
+        "stopName": "Budh Vihar",
+        "pickupTime": "07:15",
+        "dropTime": "13:45",
+        "lat": 27.5947694,
+        "lng": 76.6080554,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: Budh Vihar Alwar"
+      },
+      {
+        "sequence": 9,
+        "stopName": "V.L Memorial Public School",
+        "pickupTime": "",
+        "dropTime": "",
+        "lat": 27.6252383,
+        "lng": 76.6070767,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: V.L. Memorial Public School, Alwar"
+      }
+    ]
+  },
+  {
+    "id": "route-10",
+    "name": "Route-10",
+    "sourceFile": "Route-10.xls",
+    "stops": [
+      {
+        "sequence": 1,
+        "stopName": "J.S Four Wheels",
+        "pickupTime": "06:30",
+        "dropTime": "14:30",
+        "lat": 27.5524542,
+        "lng": 76.6461622,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: JS Four-Wheel Motors"
+      },
+      {
+        "sequence": 1,
+        "stopName": "Narayana School",
+        "pickupTime": "06:35",
+        "dropTime": "14:25",
+        "lat": 27.5561427,
+        "lng": 76.6501535,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "medium",
+        "locationNote": "Google Maps candidate: Narayana Educational Academy"
+      },
+      {
+        "sequence": 2,
+        "stopName": "Surya Nagar",
+        "pickupTime": "06:43",
+        "dropTime": "14:17",
+        "lat": 27.55928,
+        "lng": 76.653518,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: Surya Nagar"
+      },
+      {
+        "sequence": 3,
+        "stopName": "Welcome City",
+        "pickupTime": "06:45",
+        "dropTime": "14:15",
+        "lat": 27.5635625,
+        "lng": 76.6474375,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps plus-code for Welcome City"
+      },
+      {
+        "sequence": 4,
+        "stopName": "khudanpuri",
+        "pickupTime": "06:48",
+        "dropTime": "14:12",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 5,
+        "stopName": "Mangalam City",
+        "pickupTime": "06:56",
+        "dropTime": "14:04",
+        "lat": 27.5800625,
+        "lng": 76.6479375,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps plus-code area for Manglam City, Tulera"
+      },
+      {
+        "sequence": 6,
+        "stopName": "Near Maan Hotel",
+        "pickupTime": "06:56",
+        "dropTime": "14:04",
+        "lat": 27.5816875,
+        "lng": 76.6468125,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps plus-code for Maan Hotel and Restaurant"
+      },
+      {
+        "sequence": 7,
+        "stopName": "Tulera",
+        "pickupTime": "06:58",
+        "dropTime": "14:02",
+        "lat": 27.5800625,
+        "lng": 76.6479375,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "low",
+        "locationNote": "Representative Google Maps Tulera / Manglam City point"
+      },
+      {
+        "sequence": 8,
+        "stopName": "Ansal Villa",
+        "pickupTime": "07:05",
+        "dropTime": "13:55",
+        "lat": 27.5922083,
+        "lng": 76.6410147,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "low",
+        "locationNote": "Google Maps villa-area candidate; Ansal identity needs confirmation"
+      },
+      {
+        "sequence": 9,
+        "stopName": "Nursery Telco Circle",
+        "pickupTime": "07:08",
+        "dropTime": "13:52",
+        "lat": 27.5968125,
+        "lng": 76.6319375,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "low",
+        "locationNote": "Representative Google Maps Telco Circle area; nursery pickup needs confirmation"
+      },
+      {
+        "sequence": 10,
+        "stopName": "Aunty Dhaba",
+        "pickupTime": "07:08",
+        "dropTime": "13:52",
+        "lat": 27.5968125,
+        "lng": 76.6319375,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps plus-code for Aunty Dhaba and Restaurant"
+      },
+      {
+        "sequence": 11,
+        "stopName": "Near Police Thana",
+        "pickupTime": "07:14",
+        "dropTime": "13:46",
+        "lat": 27.587752,
+        "lng": 76.6415839,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "medium",
+        "locationNote": "Google Maps candidate: Police Station Sadar Thana"
+      },
+      {
+        "sequence": 12,
+        "stopName": "Near Central Park(H.K.M)",
+        "pickupTime": "07:14",
+        "dropTime": "13:47",
+        "lat": 27.5968904,
+        "lng": 76.6165582,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: Central Park, HKM Nagar"
+      },
+      {
+        "sequence": 13,
+        "stopName": "H.K.M main road",
+        "pickupTime": "07:16",
+        "dropTime": "13:44",
+        "lat": 27.5956161,
+        "lng": 76.6167212,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "medium",
+        "locationNote": "Google Maps Hasan Khan Mewati Nagar representative point"
+      },
+      {
+        "sequence": 14,
+        "stopName": "Old RTO office Road",
+        "pickupTime": "07:23",
+        "dropTime": "13:39",
+        "lat": 27.5557854,
+        "lng": 76.599999,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: Purana RTO Office"
+      },
+      {
+        "sequence": 15,
+        "stopName": "V.L Memorial Public School",
+        "pickupTime": "",
+        "dropTime": "",
+        "lat": 27.6252383,
+        "lng": 76.6070767,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: V.L. Memorial Public School, Alwar"
+      }
+    ]
+  },
+  {
+    "id": "route-11",
+    "name": "Route-11",
+    "sourceFile": "Route-11.xls",
+    "stops": [
+      {
+        "sequence": 1,
+        "stopName": "Jain Store Shalimar Extention",
+        "pickupTime": "06:50",
+        "dropTime": "14:10",
+        "lat": 27.6081875,
+        "lng": 76.6298125,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps plus-code for Jain Store, Shalimar Extension"
+      },
+      {
+        "sequence": 1,
+        "stopName": "Bhaktiram Mandir -II",
+        "pickupTime": "06:53",
+        "dropTime": "14:07",
+        "lat": 27.6131969,
+        "lng": 76.6197373,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "medium",
+        "locationNote": "Google Maps Ram Mandir candidate"
+      },
+      {
+        "sequence": 2,
+        "stopName": "Gate number 3",
+        "pickupTime": "06:54",
+        "dropTime": "14:06",
+        "lat": 27.6094431,
+        "lng": 76.6311431,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: Gate No. 3, Apna Ghar Shalimar"
+      },
+      {
+        "sequence": 3,
+        "stopName": "Old Shalimar",
+        "pickupTime": "06:58",
+        "dropTime": "14:02",
+        "lat": 27.6035625,
+        "lng": 76.6316875,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "medium",
+        "locationNote": "Google Maps plus-code area for Old Shalimar"
+      },
+      {
+        "sequence": 4,
+        "stopName": "Gate no. 6",
+        "pickupTime": "07:00",
+        "dropTime": "14:00",
+        "lat": 27.6040352,
+        "lng": 76.6309241,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: Gate No. 6, Apna Ghar Shalimar"
+      },
+      {
+        "sequence": 5,
+        "stopName": "Sai Mandir",
+        "pickupTime": "07:09",
+        "dropTime": "13:51",
+        "lat": 27.5958243,
+        "lng": 76.628155,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "medium",
+        "locationNote": "Google Maps local Sai Temple candidate; confirm the intended temple"
+      },
+      {
+        "sequence": 6,
+        "stopName": "Jaat House",
+        "pickupTime": "07:11",
+        "dropTime": "13:49",
+        "lat": 27.5927688,
+        "lng": 76.6097565,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: Jaat House"
+      },
+      {
+        "sequence": 7,
+        "stopName": "Swagat Garden",
+        "pickupTime": "07:14",
+        "dropTime": "13:46",
+        "lat": 27.5923863,
+        "lng": 76.6247996,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: Swagat Garden"
+      },
+      {
+        "sequence": 8,
+        "stopName": "Ramhet Ki Kothi",
+        "pickupTime": "07:15",
+        "dropTime": "13:45",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 9,
+        "stopName": "Rath Nagar II",
+        "pickupTime": "07:19",
+        "dropTime": "13:41",
+        "lat": 27.6020084,
+        "lng": 76.6172243,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: Rath Nagar"
+      },
+      {
+        "sequence": 10,
+        "stopName": "Dholi Doob",
+        "pickupTime": "07:23",
+        "dropTime": "13:37",
+        "lat": 27.6097279,
+        "lng": 76.6138327,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: Dholidub"
+      },
+      {
+        "sequence": 11,
+        "stopName": "V.L Memorial Public School",
+        "pickupTime": "",
+        "dropTime": "",
+        "lat": 27.6252383,
+        "lng": 76.6070767,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: V.L. Memorial Public School, Alwar"
+      }
+    ]
+  },
+  {
+    "id": "route-12",
+    "name": "Route-12",
+    "sourceFile": "Route-12.xls",
+    "stops": [
+      {
+        "sequence": 1,
+        "stopName": "Budh Vihar Block C",
+        "pickupTime": "07:05",
+        "dropTime": "13:47",
+        "lat": 27.5894647,
+        "lng": 76.6113862,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: C Block Park, Budh Vihar"
+      },
+      {
+        "sequence": 1,
+        "stopName": "Budh Vihar Block B II",
+        "pickupTime": "07:06",
+        "dropTime": "13:46",
+        "lat": 27.5916647,
+        "lng": 76.6131105,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: B Block, Budh Vihar"
+      },
+      {
+        "sequence": 2,
+        "stopName": "Budh Vihar Block D",
+        "pickupTime": "07:08",
+        "dropTime": "13:44",
+        "lat": 27.5928219,
+        "lng": 76.6102219,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: D Block, Budh Vihar"
+      },
+      {
+        "sequence": 3,
+        "stopName": "Budh Vihar D Block Park",
+        "pickupTime": "07:09",
+        "dropTime": "13:43",
+        "lat": 27.5894375,
+        "lng": 76.6114375,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "low",
+        "locationNote": "Google Maps returned the nearby C Block Park plus-code; D Block park needs confirmation"
+      },
+      {
+        "sequence": 4,
+        "stopName": "Budh Vihar Block E II",
+        "pickupTime": "07:10",
+        "dropTime": "13:44",
+        "lat": 27.5966568,
+        "lng": 76.6089605,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "medium",
+        "locationNote": "Google Maps E-94 representative point for E Block"
+      },
+      {
+        "sequence": 5,
+        "stopName": "Budh Vihar Block A II",
+        "pickupTime": "07:10",
+        "dropTime": "14:41",
+        "lat": 27.597684,
+        "lng": 76.610545,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "medium",
+        "locationNote": "Google Maps A-82 representative point for A Block"
+      },
+      {
+        "sequence": 6,
+        "stopName": "Ganesh nagar",
+        "pickupTime": "07:11",
+        "dropTime": "13:42",
+        "lat": 27.5998868,
+        "lng": 76.6074264,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: Ganesh Nagar"
+      },
+      {
+        "sequence": 7,
+        "stopName": "Budh Vihar Extention",
+        "pickupTime": "07:10",
+        "dropTime": "13:43",
+        "lat": 27.5947694,
+        "lng": 76.6080554,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "low",
+        "locationNote": "Google Maps Budh Vihar center; extension boundary needs confirmation"
+      },
+      {
+        "sequence": 8,
+        "stopName": "V.L Memorial Public School",
+        "pickupTime": "",
+        "dropTime": "",
+        "lat": 27.6252383,
+        "lng": 76.6070767,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: V.L. Memorial Public School, Alwar"
+      }
+    ]
+  }
+]
