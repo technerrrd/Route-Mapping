@@ -2,7 +2,8 @@
   {
     "id": "route-1",
     "name": "Route-1",
-    "sourceFile": "Route-1.xls",
+    "sourceFile": "All-route-stops.xls",
+    "sourceSheet": "details",
     "stops": [
       {
         "sequence": 1,
@@ -174,7 +175,8 @@
   {
     "id": "route-2",
     "name": "Route-2",
-    "sourceFile": "Route-2.xls",
+    "sourceFile": "All-route-stops.xls",
+    "sourceSheet": "details",
     "stops": [
       {
         "sequence": 1,
@@ -225,7 +227,8 @@
   {
     "id": "route-3",
     "name": "Route-3",
-    "sourceFile": "Route-3.xls",
+    "sourceFile": "All-route-stops.xls",
+    "sourceSheet": "details",
     "stops": [
       {
         "sequence": 1,
@@ -284,17 +287,6 @@
       },
       {
         "sequence": 6,
-        "stopName": "Budh Vihar Block E I",
-        "pickupTime": "07:15",
-        "dropTime": "13:45",
-        "lat": 27.5966568,
-        "lng": 76.6089605,
-        "locationSource": "google-maps-review-candidate",
-        "locationConfidence": "medium-high",
-        "locationNote": "Google Maps place: E-94, Budh Vihar; representative E Block point, so confirm the pickup corner"
-      },
-      {
-        "sequence": 6,
         "stopName": "PATRAKAR COLONY (BEHIND RAJA BHARTHARI PANORMA)",
         "pickupTime": "07:19",
         "dropTime": "13:41",
@@ -303,6 +295,17 @@
         "locationSource": "google-maps-review-candidate",
         "locationConfidence": "high",
         "locationNote": "Google Maps Raja Bharthari Panorama plus-code position in Patrakar Colony"
+      },
+      {
+        "sequence": 6,
+        "stopName": "Budh Vihar Block E I",
+        "pickupTime": "07:15",
+        "dropTime": "13:45",
+        "lat": 27.5966568,
+        "lng": 76.6089605,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "medium-high",
+        "locationNote": "Google Maps place: E-94, Budh Vihar; representative E Block point, so confirm the pickup corner"
       },
       {
         "sequence": 7,
@@ -331,7 +334,8 @@
   {
     "id": "route-4",
     "name": "Route-4",
-    "sourceFile": "Route-4.xls",
+    "sourceFile": "All-route-stops.xls",
+    "sourceSheet": "details",
     "stops": [
       {
         "sequence": 1,
@@ -481,7 +485,8 @@
   {
     "id": "route-5",
     "name": "Route-5",
-    "sourceFile": "Route-5.xls",
+    "sourceFile": "All-route-stops.xls",
+    "sourceSheet": "details",
     "stops": [
       {
         "sequence": 1,
@@ -642,7 +647,8 @@
   {
     "id": "route-6",
     "name": "Route-6",
-    "sourceFile": "Route-6.xls",
+    "sourceFile": "All-route-stops.xls",
+    "sourceSheet": "details",
     "stops": [
       {
         "sequence": 1,
@@ -781,7 +787,8 @@
   {
     "id": "route-7",
     "name": "Route-7",
-    "sourceFile": "Route-7.xls",
+    "sourceFile": "All-route-stops.xls",
+    "sourceSheet": "details",
     "stops": [
       {
         "sequence": 1,
@@ -797,7 +804,7 @@
       {
         "sequence": 1,
         "stopName": "Ashoka Talkies-II",
-        "pickupTime": "06:45",
+        "pickupTime": "06:42",
         "dropTime": "14:15",
         "lat": 27.5636273,
         "lng": 76.6044612,
@@ -808,7 +815,7 @@
       {
         "sequence": 2,
         "stopName": "RR Circle",
-        "pickupTime": "06:52",
+        "pickupTime": "06:47",
         "dropTime": "14:08",
         "lat": 27.5555898,
         "lng": 76.616703,
@@ -819,7 +826,7 @@
       {
         "sequence": 3,
         "stopName": "Aravali Hotel",
-        "pickupTime": "06:54",
+        "pickupTime": "06:48",
         "dropTime": "14:06",
         "lat": 27.5569375,
         "lng": 76.6205625,
@@ -830,7 +837,7 @@
       {
         "sequence": 4,
         "stopName": "Railway Station",
-        "pickupTime": "06:56",
+        "pickupTime": "06:50",
         "dropTime": "14:04",
         "lat": 27.5604521,
         "lng": 76.6211988,
@@ -841,7 +848,7 @@
       {
         "sequence": 5,
         "stopName": "Old Station Road",
-        "pickupTime": "06:58",
+        "pickupTime": "06:54",
         "dropTime": "14:00",
         "lat": null,
         "lng": null,
@@ -852,7 +859,7 @@
       {
         "sequence": 6,
         "stopName": "Jal ka kuan,Barf Khana Road",
-        "pickupTime": "07:00",
+        "pickupTime": "06:58",
         "dropTime": "13:58",
         "lat": null,
         "lng": null,
@@ -863,7 +870,7 @@
       {
         "sequence": 7,
         "stopName": "Mahawar dharamshala",
-        "pickupTime": "07:01",
+        "pickupTime": "07:00",
         "dropTime": "13:55",
         "lat": 27.5604375,
         "lng": 76.6165625,
@@ -874,7 +881,7 @@
       {
         "sequence": 8,
         "stopName": "Hyundai Showroom Main road(temple)",
-        "pickupTime": "07:08",
+        "pickupTime": "07:01",
         "dropTime": "13:52",
         "lat": 27.5643125,
         "lng": 76.6169375,
@@ -885,7 +892,7 @@
       {
         "sequence": 9,
         "stopName": "Jubli Bass Circle",
-        "pickupTime": "07:05",
+        "pickupTime": "07:02",
         "dropTime": "13:50",
         "lat": null,
         "lng": null,
@@ -896,7 +903,7 @@
       {
         "sequence": 10,
         "stopName": "Aerodrum Road",
-        "pickupTime": "07:06",
+        "pickupTime": "07:03",
         "dropTime": "13:49",
         "lat": null,
         "lng": null,
@@ -907,7 +914,7 @@
       {
         "sequence": 11,
         "stopName": "Karamchari Colony I",
-        "pickupTime": "07:08",
+        "pickupTime": "07:06",
         "dropTime": "13:47",
         "lat": null,
         "lng": null,
@@ -918,7 +925,7 @@
       {
         "sequence": 12,
         "stopName": "Shivaji Park (Near Railway Line)",
-        "pickupTime": "07:10",
+        "pickupTime": "07:08",
         "dropTime": "13:45",
         "lat": 27.5898582,
         "lng": 76.6167212,
@@ -929,7 +936,7 @@
       {
         "sequence": 13,
         "stopName": "Shivaji Park, Tempo Stand",
-        "pickupTime": "07:10",
+        "pickupTime": "07:08",
         "dropTime": "13:45",
         "lat": 27.5898582,
         "lng": 76.6167212,
@@ -975,7 +982,8 @@
   {
     "id": "route-8",
     "name": "Route-8",
-    "sourceFile": "Route-8.xls",
+    "sourceFile": "All-route-stops.xls",
+    "sourceSheet": "details",
     "stops": [
       {
         "sequence": 1,
@@ -1103,7 +1111,8 @@
   {
     "id": "route-9",
     "name": "Route-9",
-    "sourceFile": "Route-9.xls",
+    "sourceFile": "All-route-stops.xls",
+    "sourceSheet": "details",
     "stops": [
       {
         "sequence": 1,
@@ -1173,17 +1182,6 @@
       },
       {
         "sequence": 6,
-        "stopName": "Vijay Nagar III",
-        "pickupTime": "07:12",
-        "dropTime": "13:48",
-        "lat": 27.5835358,
-        "lng": 76.6109441,
-        "locationSource": "google-maps-review-candidate",
-        "locationConfidence": "high",
-        "locationNote": "Google Maps place: Vijay Nagar"
-      },
-      {
-        "sequence": 6,
         "stopName": "National College",
         "pickupTime": "07:13",
         "dropTime": "13:47",
@@ -1192,6 +1190,17 @@
         "locationSource": "google-maps-review-candidate",
         "locationConfidence": "medium",
         "locationNote": "Google Maps candidate: National T.T. College for Girls; verify college identity"
+      },
+      {
+        "sequence": 6,
+        "stopName": "Vijay Nagar III",
+        "pickupTime": "07:12",
+        "dropTime": "13:48",
+        "lat": 27.5835358,
+        "lng": 76.6109441,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: Vijay Nagar"
       },
       {
         "sequence": 7,
@@ -1231,7 +1240,8 @@
   {
     "id": "route-10",
     "name": "Route-10",
-    "sourceFile": "Route-10.xls",
+    "sourceFile": "All-route-stops.xls",
+    "sourceSheet": "details",
     "stops": [
       {
         "sequence": 1,
@@ -1414,7 +1424,8 @@
   {
     "id": "route-11",
     "name": "Route-11",
-    "sourceFile": "Route-11.xls",
+    "sourceFile": "All-route-stops.xls",
+    "sourceSheet": "details",
     "stops": [
       {
         "sequence": 1,
@@ -1553,7 +1564,8 @@
   {
     "id": "route-12",
     "name": "Route-12",
-    "sourceFile": "Route-12.xls",
+    "sourceFile": "All-route-stops.xls",
+    "sourceSheet": "details",
     "stops": [
       {
         "sequence": 1,
@@ -1645,6 +1657,1187 @@
       },
       {
         "sequence": 8,
+        "stopName": "V.L Memorial Public School",
+        "pickupTime": "",
+        "dropTime": "",
+        "lat": 27.6252383,
+        "lng": 76.6070767,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: V.L. Memorial Public School, Alwar"
+      }
+    ]
+  },
+  {
+    "id": "route-13",
+    "name": "Route-13",
+    "sourceFile": "All-route-stops.xls",
+    "sourceSheet": "details",
+    "stops": [
+      {
+        "sequence": 1,
+        "stopName": "Tatarpur",
+        "pickupTime": "06:25",
+        "dropTime": "14:25",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 1,
+        "stopName": "kuan par,behroj",
+        "pickupTime": "06:40",
+        "dropTime": "14:10",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 2,
+        "stopName": "Behroj",
+        "pickupTime": "06:35",
+        "dropTime": "14:15",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 3,
+        "stopName": "Chandoli (Roja Ka Bas)",
+        "pickupTime": "07:10",
+        "dropTime": "14:20",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 3,
+        "stopName": "Jindoli",
+        "pickupTime": "06:40",
+        "dropTime": "14:10",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 4,
+        "stopName": "Soraka",
+        "pickupTime": "06:50",
+        "dropTime": "14:00",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 4,
+        "stopName": "Dalalpur",
+        "pickupTime": "07:17",
+        "dropTime": "13:49",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 5,
+        "stopName": "Nagli",
+        "pickupTime": "07:15",
+        "dropTime": "13:45",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 6,
+        "stopName": "Dehra",
+        "pickupTime": "07:20",
+        "dropTime": "13:40",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 7,
+        "stopName": "V.L Memorial Public School",
+        "pickupTime": "",
+        "dropTime": "",
+        "lat": 27.6252383,
+        "lng": 76.6070767,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: V.L. Memorial Public School, Alwar"
+      }
+    ]
+  },
+  {
+    "id": "route-14",
+    "name": "Route-14",
+    "sourceFile": "All-route-stops.xls",
+    "sourceSheet": "details",
+    "stops": [
+      {
+        "sequence": 1,
+        "stopName": "HDFC Bank",
+        "pickupTime": "06:25",
+        "dropTime": "14:30",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 1,
+        "stopName": "Mishra Medical",
+        "pickupTime": "06:25",
+        "dropTime": "14:30",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 2,
+        "stopName": "Shashtri Colony,Kid Zee School",
+        "pickupTime": "06:30",
+        "dropTime": "14:25",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 3,
+        "stopName": "kufuti Villa",
+        "pickupTime": "07:05",
+        "dropTime": "13:55",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 4,
+        "stopName": "Shalimar E-Block 198",
+        "pickupTime": "07:05",
+        "dropTime": "14:25",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 5,
+        "stopName": "Chakki Wali Gali",
+        "pickupTime": "07:15",
+        "dropTime": "13:45",
+        "lat": 27.5942903,
+        "lng": 76.6218722,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "low",
+        "locationNote": "Google Maps candidate: Gopi Atta Chakki; verify the intended lane"
+      },
+      {
+        "sequence": 6,
+        "stopName": "V.L Memorial Public School",
+        "pickupTime": "",
+        "dropTime": "",
+        "lat": 27.6252383,
+        "lng": 76.6070767,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: V.L. Memorial Public School, Alwar"
+      }
+    ]
+  },
+  {
+    "id": "route-15-ishwar",
+    "name": "Route-15 Ishwar",
+    "sourceFile": "All-route-stops.xls",
+    "sourceSheet": "details",
+    "stops": [
+      {
+        "sequence": 1,
+        "stopName": "Dhokdi",
+        "pickupTime": "06:25",
+        "dropTime": "14:20",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 1,
+        "stopName": "Bala Dehra",
+        "pickupTime": "06:30",
+        "dropTime": "14:10",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 2,
+        "stopName": "Hajipur",
+        "pickupTime": "06:45",
+        "dropTime": "13:55",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 3,
+        "stopName": "Mangalbas",
+        "pickupTime": "06:55",
+        "dropTime": "13:50",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 4,
+        "stopName": "Dehra Kasba",
+        "pickupTime": "07:05",
+        "dropTime": "13:40",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 5,
+        "stopName": "V.L Memorial Public School",
+        "pickupTime": "",
+        "dropTime": "",
+        "lat": 27.6252383,
+        "lng": 76.6070767,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: V.L. Memorial Public School, Alwar"
+      }
+    ]
+  },
+  {
+    "id": "route-16-nagli-dhokdi",
+    "name": "Route-16 Nagli-Dhokdi",
+    "sourceFile": "All-route-stops.xls",
+    "sourceSheet": "details",
+    "stops": [
+      {
+        "sequence": 1,
+        "stopName": "Shahpur",
+        "pickupTime": "06:40",
+        "dropTime": "14:11",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 1,
+        "stopName": "Dehra-II",
+        "pickupTime": "06:45",
+        "dropTime": "14:19",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 2,
+        "stopName": "Dhokdi-II",
+        "pickupTime": "07:05",
+        "dropTime": "13:55",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 3,
+        "stopName": "V.L Memorial Public School",
+        "pickupTime": "",
+        "dropTime": "",
+        "lat": 27.6252383,
+        "lng": 76.6070767,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: V.L. Memorial Public School, Alwar"
+      }
+    ]
+  },
+  {
+    "id": "route-17-new",
+    "name": "Route-17 new",
+    "sourceFile": "All-route-stops.xls",
+    "sourceSheet": "details",
+    "stops": [
+      {
+        "sequence": 1,
+        "stopName": "Peelathada",
+        "pickupTime": "06:30",
+        "dropTime": "14:30",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 1,
+        "stopName": "Palai- Naurangabad",
+        "pickupTime": "06:40",
+        "dropTime": "14:20",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 2,
+        "stopName": "Lodhari - II",
+        "pickupTime": "06:50",
+        "dropTime": "14:10",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 3,
+        "stopName": "V.L Memorial Public School",
+        "pickupTime": "",
+        "dropTime": "",
+        "lat": 27.6252383,
+        "lng": 76.6070767,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: V.L. Memorial Public School, Alwar"
+      }
+    ]
+  },
+  {
+    "id": "route-18-new",
+    "name": "Route-18 new",
+    "sourceFile": "All-route-stops.xls",
+    "sourceSheet": "details",
+    "stops": [
+      {
+        "sequence": 1,
+        "stopName": "Lodhari I",
+        "pickupTime": "07:00",
+        "dropTime": "14:00",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 2,
+        "stopName": "V.L Memorial Public School",
+        "pickupTime": "",
+        "dropTime": "",
+        "lat": 27.6252383,
+        "lng": 76.6070767,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: V.L. Memorial Public School, Alwar"
+      }
+    ]
+  },
+  {
+    "id": "route-19",
+    "name": "Route-19",
+    "sourceFile": "All-route-stops.xls",
+    "sourceSheet": "details",
+    "stops": [
+      {
+        "sequence": 1,
+        "stopName": "Jagta Basai",
+        "pickupTime": "06:00",
+        "dropTime": "14:30",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 2,
+        "stopName": "V.L Memorial Public School",
+        "pickupTime": "",
+        "dropTime": "",
+        "lat": 27.6252383,
+        "lng": 76.6070767,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: V.L. Memorial Public School, Alwar"
+      }
+    ]
+  },
+  {
+    "id": "route-20-dalalpur-chandoli",
+    "name": "Route-20(Dalalpur-chandoli)",
+    "sourceFile": "All-route-stops.xls",
+    "sourceSheet": "details",
+    "stops": [
+      {
+        "sequence": 1,
+        "stopName": "Chandoli I",
+        "pickupTime": "06:40",
+        "dropTime": "14:20",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 2,
+        "stopName": "Nagli(Nali)",
+        "pickupTime": "06:55",
+        "dropTime": "13:45",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 3,
+        "stopName": "V.L Memorial Public School",
+        "pickupTime": "",
+        "dropTime": "",
+        "lat": 27.6252383,
+        "lng": 76.6070767,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: V.L. Memorial Public School, Alwar"
+      }
+    ]
+  },
+  {
+    "id": "route-21-gaurav",
+    "name": "Route-21 (Gaurav)",
+    "sourceFile": "All-route-stops.xls",
+    "sourceSheet": "details",
+    "stops": [
+      {
+        "sequence": 1,
+        "stopName": "Ambedkar Circle",
+        "pickupTime": "06:30",
+        "dropTime": "14:05",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 1,
+        "stopName": "Budh Vihar B Block IV",
+        "pickupTime": "06:45",
+        "dropTime": "13:50",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 2,
+        "stopName": "Hkm",
+        "pickupTime": "06:50",
+        "dropTime": "13:45",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 3,
+        "stopName": "Rath Nagar VI",
+        "pickupTime": "07:05",
+        "dropTime": "13:37",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 4,
+        "stopName": "Dholi Doob II",
+        "pickupTime": "07:10",
+        "dropTime": "13:35",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 5,
+        "stopName": "V.L Memorial Public School",
+        "pickupTime": "",
+        "dropTime": "",
+        "lat": 27.6252383,
+        "lng": 76.6070767,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: V.L. Memorial Public School, Alwar"
+      }
+    ]
+  },
+  {
+    "id": "route-22-pahadganj",
+    "name": "Route-22 Pahadganj",
+    "sourceFile": "All-route-stops.xls",
+    "sourceSheet": "details",
+    "stops": [
+      {
+        "sequence": 1,
+        "stopName": "Outside of Delhi gate near khass School",
+        "pickupTime": "06:35",
+        "dropTime": "14:25",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 1,
+        "stopName": "Scheme-10 B",
+        "pickupTime": "06:40",
+        "dropTime": "14:10",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 2,
+        "stopName": "Outside delhi gate.",
+        "pickupTime": "06:40",
+        "dropTime": "14:20",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 3,
+        "stopName": "Budh Vihar Block B III",
+        "pickupTime": "06:50",
+        "dropTime": "14:10",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 4,
+        "stopName": "Rath Nagar V",
+        "pickupTime": "07:00",
+        "dropTime": "14:00",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 5,
+        "stopName": "Rath Nagar (D-Block)",
+        "pickupTime": "07:05",
+        "dropTime": "14:15",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 6,
+        "stopName": "V.L Memorial Public School",
+        "pickupTime": "",
+        "dropTime": "",
+        "lat": 27.6252383,
+        "lng": 76.6070767,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: V.L. Memorial Public School, Alwar"
+      }
+    ]
+  },
+  {
+    "id": "route-23-sagar-upar",
+    "name": "Route-23 sagar upar",
+    "sourceFile": "All-route-stops.xls",
+    "sourceSheet": "details",
+    "stops": [
+      {
+        "sequence": 1,
+        "stopName": "Vikas Path",
+        "pickupTime": "06:35",
+        "dropTime": "14:25",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 1,
+        "stopName": "Delhi Darwaja bahar",
+        "pickupTime": "06:40",
+        "dropTime": "14:20",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 2,
+        "stopName": "Munshi Bagh",
+        "pickupTime": "06:42",
+        "dropTime": "14:18",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 3,
+        "stopName": "Holi Upar behind jagganath mandir",
+        "pickupTime": "06:45",
+        "dropTime": "14:15",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 4,
+        "stopName": "Sagar Upar",
+        "pickupTime": "06:47",
+        "dropTime": "14:13",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 5,
+        "stopName": "Outside delhi gate",
+        "pickupTime": "06:50",
+        "dropTime": "14:10",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 6,
+        "stopName": "mahal chowk",
+        "pickupTime": "06:44",
+        "dropTime": "14:16",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 7,
+        "stopName": "V.L Memorial Public School",
+        "pickupTime": "",
+        "dropTime": "",
+        "lat": 27.6252383,
+        "lng": 76.6070767,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: V.L. Memorial Public School, Alwar"
+      }
+    ]
+  },
+  {
+    "id": "route-24-dinesh-bhupendra",
+    "name": "Route-24 Dinesh(Bhupendra)",
+    "sourceFile": "All-route-stops.xls",
+    "sourceSheet": "details",
+    "stops": [
+      {
+        "sequence": 1,
+        "stopName": "Sai Dham Colony",
+        "pickupTime": "06:40",
+        "dropTime": "14:10",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 1,
+        "stopName": "Anand Vihar",
+        "pickupTime": "06:50",
+        "dropTime": "14:00",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 2,
+        "stopName": "Pankaj nagar",
+        "pickupTime": "06:55",
+        "dropTime": "13:55",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 3,
+        "stopName": "Ganpati Vihar III",
+        "pickupTime": "07:00",
+        "dropTime": "13:50",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 4,
+        "stopName": "Tijara Phatak Yadav colony",
+        "pickupTime": "07:05",
+        "dropTime": "13:45",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 5,
+        "stopName": "Nearby Underpass ganpati vihar",
+        "pickupTime": "07:05",
+        "dropTime": "13:45",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 6,
+        "stopName": "Shiv Colony II",
+        "pickupTime": "07:15",
+        "dropTime": "13:45",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 7,
+        "stopName": "V.L Memorial Public School",
+        "pickupTime": "",
+        "dropTime": "",
+        "lat": 27.6252383,
+        "lng": 76.6070767,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: V.L. Memorial Public School, Alwar"
+      }
+    ]
+  },
+  {
+    "id": "route-25-transport-nagar",
+    "name": "Route-25 transport nagar",
+    "sourceFile": "All-route-stops.xls",
+    "sourceSheet": "details",
+    "stops": [
+      {
+        "sequence": 1,
+        "stopName": "60 Feet Road II",
+        "pickupTime": "06:30",
+        "dropTime": "14:30",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 1,
+        "stopName": "Ranjeet Nagar",
+        "pickupTime": "06:34",
+        "dropTime": "14:26",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 2,
+        "stopName": "Tuleda Road Shiv Colony",
+        "pickupTime": "06:38",
+        "dropTime": "14:20",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 3,
+        "stopName": "Ranjeet Nagar B-Block",
+        "pickupTime": "06:43",
+        "dropTime": "14:17",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 4,
+        "stopName": "Transport Nagar Preet Vihar -1",
+        "pickupTime": "06:46",
+        "dropTime": "14:14",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 5,
+        "stopName": "Neb extension Transport Nagar",
+        "pickupTime": "06:49",
+        "dropTime": "14:11",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 6,
+        "stopName": "Transport Nagar II",
+        "pickupTime": "06:53",
+        "dropTime": "14:07",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 7,
+        "stopName": "MIG Flat",
+        "pickupTime": "06:53",
+        "dropTime": "14:07",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 8,
+        "stopName": "Transport Nagar",
+        "pickupTime": "06:56",
+        "dropTime": "14:04",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 9,
+        "stopName": "V.L Memorial Public School",
+        "pickupTime": "",
+        "dropTime": "",
+        "lat": 27.6252383,
+        "lng": 76.6070767,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: V.L. Memorial Public School, Alwar"
+      }
+    ]
+  },
+  {
+    "id": "route-26-dinesh-budh-vihar",
+    "name": "Route-26 Dinesh budh vihar",
+    "sourceFile": "All-route-stops.xls",
+    "sourceSheet": "details",
+    "stops": [
+      {
+        "sequence": 1,
+        "stopName": "Vijay nagar",
+        "pickupTime": "06:55",
+        "dropTime": "14:05",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 1,
+        "stopName": "EWS QTR",
+        "pickupTime": "06:45",
+        "dropTime": "14:15",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 2,
+        "stopName": "Budh Vihar Block B V",
+        "pickupTime": "06:50",
+        "dropTime": "14:10",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 3,
+        "stopName": "Budh Vihar Block A",
+        "pickupTime": "07:00",
+        "dropTime": "14:00",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 4,
+        "stopName": "V.L Memorial Public School",
+        "pickupTime": "",
+        "dropTime": "",
+        "lat": 27.6252383,
+        "lng": 76.6070767,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: V.L. Memorial Public School, Alwar"
+      }
+    ]
+  },
+  {
+    "id": "route-27-karamchari-colony",
+    "name": "Route-27 Karamchari Colony",
+    "sourceFile": "All-route-stops.xls",
+    "sourceSheet": "details",
+    "stops": [
+      {
+        "sequence": 1,
+        "stopName": "Jail Circle",
+        "pickupTime": "06:51",
+        "dropTime": "01:59",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 1,
+        "stopName": "Karamchari Colony",
+        "pickupTime": "06:51",
+        "dropTime": "01:53",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 2,
+        "stopName": "Shivaji Park II",
+        "pickupTime": "07:02",
+        "dropTime": "13:48",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 3,
+        "stopName": "Near shubham hospital (DRDO)",
+        "pickupTime": "07:16",
+        "dropTime": "13:44",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 4,
+        "stopName": "V.L Memorial Public School",
+        "pickupTime": "",
+        "dropTime": "",
+        "lat": 27.6252383,
+        "lng": 76.6070767,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: V.L. Memorial Public School, Alwar"
+      }
+    ]
+  },
+  {
+    "id": "route-28-van-2",
+    "name": "Route-28(VAN-2)",
+    "sourceFile": "All-route-stops.xls",
+    "sourceSheet": "details",
+    "stops": [
+      {
+        "sequence": 1,
+        "stopName": "Dilawarpur",
+        "pickupTime": "06:35",
+        "dropTime": "13:52",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 1,
+        "stopName": "Shahpur-II",
+        "pickupTime": "06:42",
+        "dropTime": "14:00",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 2,
+        "stopName": "V.L Memorial Public School",
+        "pickupTime": "",
+        "dropTime": "",
+        "lat": 27.6252383,
+        "lng": 76.6070767,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: V.L. Memorial Public School, Alwar"
+      }
+    ]
+  },
+  {
+    "id": "route-29",
+    "name": "Route-29",
+    "sourceFile": "All-route-stops.xls",
+    "sourceSheet": "details",
+    "stops": [
+      {
+        "sequence": 1,
+        "stopName": "nangli ozha,near goverment school",
+        "pickupTime": "06:25",
+        "dropTime": "14:30",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 1,
+        "stopName": "Ghatla - Route 29",
+        "pickupTime": "07:00",
+        "dropTime": "14:00",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 2,
+        "stopName": "Barvada,padisal",
+        "pickupTime": "07:05",
+        "dropTime": "13:55",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 3,
+        "stopName": "Padisal Phatak I",
+        "pickupTime": "07:10",
+        "dropTime": "14:00",
+        "lat": null,
+        "lng": null,
+        "locationSource": "unresolved",
+        "locationConfidence": "unresolved",
+        "locationNote": ""
+      },
+      {
+        "sequence": 4,
         "stopName": "V.L Memorial Public School",
         "pickupTime": "",
         "dropTime": "",

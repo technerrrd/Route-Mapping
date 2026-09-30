@@ -1,12 +1,12 @@
 # Route map gallery
 
-This project turns every `Route-*.xls` or `Route-*.xlsx` file in this folder into a selectable route map.
+This project turns the consolidated `All-route-stops.xls` workbook into a selectable route map. Every worksheet is read, and rows are grouped by the exact value in `Route Name`.
 
 `V.L Memorial Public School` is automatically added as the final stop of every route, including routes added later.
 
 ## Use it
 
-1. Add route workbooks to this folder. Keep the columns `Route Name`, `Stop Name`, `Sequence`, `Pickup Time`, and `Drop Time`.
+1. Replace or edit `All-route-stops.xls` in this folder. Keep the columns `Route Name`, `Stop Name`, `Sequence`, `Pickup Time`, and `Drop Time`.
 2. Run `npm install` once.
 3. Run `npm start` after adding or changing workbooks.
 4. Open `http://localhost:4173`.

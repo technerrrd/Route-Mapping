@@ -1,6 +1,6 @@
-import { mkdir, readFile, readdir, writeFile, copyFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile, copyFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
-import { basename, join } from "node:path";
+import { join } from "node:path";
 import XLSX from "xlsx";
 
 const root = process.cwd();
@@ -8,6 +8,8 @@ const dataDir = join(root, "data");
 const cachePath = join(root, ".route-geocode-cache.json");
 const overridePath = join(root, "route-overrides.json");
 const googleCandidatePath = join(root, "google-maps-candidates.json");
+const scheduleWorkbookName = "All-route-stops.xls";
+const scheduleWorkbookPath = join(root, scheduleWorkbookName);
 const context = process.env.ROUTE_LOCATION_CONTEXT || "Alwar, Rajasthan, India";
 const offline = process.argv.includes("--offline");
 const finalStopName = "V.L Memorial Public School";
@@ -65,24 +67,36 @@ async function geocode(stopName, cache, overrides) {
   return cache[key];
 }
 
-const files = (await readdir(root))
-  .filter((name) => /^Route[-_ ].*\.xls[x]?$/i.test(name))
-  .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
+if (!existsSync(scheduleWorkbookPath)) {
+  throw new Error(`${scheduleWorkbookName} was not found in the project folder.`);
+}
 
-if (!files.length) throw new Error("No Route-*.xls or Route-*.xlsx files found in the project folder.");
+const workbook = XLSX.readFile(scheduleWorkbookPath, { cellDates: false });
+const rows = workbook.SheetNames.flatMap((sheetName) => {
+  const sheet = workbook.Sheets[sheetName];
+  return XLSX.utils.sheet_to_json(sheet, { defval: "", raw: true }).map((row) => ({ ...row, sourceSheet: sheetName }));
+});
+const requiredHeaders = ["Route Name", "Stop Name", "Sequence", "Pickup Time", "Drop Time"];
+const availableHeaders = new Set(rows.flatMap((row) => Object.keys(row)));
+const missingHeaders = requiredHeaders.filter((header) => !availableHeaders.has(header));
+if (missingHeaders.length) {
+  throw new Error(`${scheduleWorkbookName} is missing required columns: ${missingHeaders.join(", ")}`);
+}
+
+const routeNames = [...new Set(rows.map((row) => clean(row["Route Name"])).filter(Boolean))]
+  .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
+if (!routeNames.length) throw new Error(`${scheduleWorkbookName} does not contain any named routes.`);
 
 const cache = await readJson(cachePath, {});
 const googleCandidates = await readJson(googleCandidatePath, {});
 const overrides = { ...googleCandidates, ...(await readJson(overridePath, {})) };
 const routes = [];
 
-for (const file of files) {
-  const workbook = XLSX.readFile(join(root, file), { cellDates: false });
-  const sheet = workbook.Sheets[workbook.SheetNames[0]];
-  const rows = XLSX.utils.sheet_to_json(sheet, { defval: "", raw: true });
+for (const routeName of routeNames) {
+  const routeRows = rows.filter((row) => clean(row["Route Name"]) === routeName);
   const stops = [];
 
-  for (const [index, row] of rows.entries()) {
+  for (const [index, row] of routeRows.entries()) {
     const stopName = clean(row["Stop Name"]);
     if (!stopName) continue;
     const location = await geocode(stopName, cache, overrides);
@@ -117,11 +131,17 @@ for (const file of files) {
     locationNote: finalStop?.locationNote || finalLocation?.note || finalLocation?.displayName || "",
   });
   routes.push({
-    id: basename(file).replace(/\.xlsx?$/i, "").toLowerCase().replace(/[^a-z0-9]+/g, "-"),
-    name: clean(rows.find((row) => clean(row["Route Name"]))?.["Route Name"]) || basename(file).replace(/\.xlsx?$/i, ""),
-    sourceFile: file,
+    id: routeName.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""),
+    name: routeName,
+    sourceFile: scheduleWorkbookName,
+    sourceSheet: routeRows[0]?.sourceSheet || "",
     stops,
   });
+}
+
+const duplicateRouteIds = routes.filter((route, index) => routes.findIndex((candidate) => candidate.id === route.id) !== index);
+if (duplicateRouteIds.length) {
+  throw new Error(`Route names generate duplicate IDs: ${duplicateRouteIds.map((route) => route.name).join(", ")}`);
 }
 
 await mkdir(dataDir, { recursive: true });
@@ -137,6 +157,6 @@ for (const image of ["layers.png", "layers-2x.png", "marker-icon.png", "marker-i
 }
 
 const unresolved = routes.flatMap((route) => route.stops.filter((stop) => !Number.isFinite(stop.lat) || !Number.isFinite(stop.lng)).map((stop) => `${route.name}: ${stop.stopName}`));
-console.log(`Built ${routes.length} routes from ${files.length} workbook(s).`);
+console.log(`Built ${routes.length} routes from ${scheduleWorkbookName}.`);
 console.log(`Mapped ${routes.reduce((sum, route) => sum + route.stops.length, 0) - unresolved.length} of ${routes.reduce((sum, route) => sum + route.stops.length, 0)} stops.`);
 if (unresolved.length) console.log(`Needs review:\n- ${unresolved.join("\n- ")}`);

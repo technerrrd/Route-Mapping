@@ -2,12 +2,12 @@
 
 ## Project state
 
-Route Map Gallery is a local static web app for reviewing school-bus stop locations around Alwar, Rajasthan. The repository currently has one commit and no application-code work in progress or uncommitted changes before this documentation update.
+Route Map Gallery is a local static web app for reviewing school-bus stop locations around Alwar, Rajasthan.
 
 Completed functionality:
 
-- Twelve root-level `.xls` workbooks are parsed from their first worksheet.
-- The generated dataset contains 12 routes and 143 route-stop records. This includes V.L Memorial Public School appended as the final stop of every route; there are 132 unique stop names.
+- The consolidated root-level `All-route-stops.xls` workbook is parsed across all worksheets and grouped by exact `Route Name` values. The legacy `Route-1.xls` through `Route-12.xls` files remain for traceability but are not build inputs.
+- The generated dataset contains 29 routes, 238 route-stop records, and 209 unique stop names. This includes V.L Memorial Public School appended as the final stop of every route.
 - Pickup/drop values are normalized, routes and stops are ordered, and route metadata records the source workbook.
 - Candidate coordinates come from `google-maps-candidates.json`, higher-priority `route-overrides.json`, the ignored Nominatim cache, or an online Nominatim lookup.
 - The responsive browser UI supports route selection, schedule tables, numbered Leaflet markers, candidate confidence/notes, direct route polylines, stop navigation, confirmation/denial, coordinate adjustment, and JSON review export.
@@ -17,24 +17,13 @@ Completed functionality:
 
 ## Current work and known data gaps
 
-The repository state indicates that the active work is candidate-location validation. Of 143 route-stop records, 127 have a candidate coordinate and 16 are unresolved:
-
-- Route-1: `14 Beegha`
-- Route-4: `Vallabhgram`
-- Route-6: `Manu marg`, `MANNI KA BARH`, `Swarg Road`, `Scheme No. 1`
-- Route-7: `kacheri Mod`, `Old Station Road`, `Jal ka kuan,Barf Khana Road`, `Jubli Bass Circle`, `Aerodrum Road`, `Karamchari Colony I`
-- Route-8: `Homepathy College Road`
-- Route-9: `Atta mandir`
-- Route-10: `khudanpuri`
-- Route-11: `Ramhet Ki Kothi`
-
-The 127 mapped records are still candidates: 79 are marked high confidence, 29 medium, 2 medium-high, and 17 low. Confidence is descriptive metadata, not a human confirmation. Several candidate notes explicitly identify representative neighborhood points or ambiguous landmarks that need checking.
+The active work is candidate-location validation. The offline build maps 145 of 238 route-stop records and leaves 93 unresolved, mostly among Routes 13–29 added by the consolidated workbook. The mapped records include 96 high-, 2 medium-high-, 29 medium-, and 18 low-confidence candidates. Confidence is descriptive metadata, not a human confirmation.
 
 The source spreadsheets also contain duplicate and non-contiguous sequence numbers (for example, multiple routes have two sequence `1` entries). The build preserves these values and sorts by them; it does not repair source numbering. Because browser review keys include route ID, sequence, and stop name, identical sequence numbers are safe when names differ, but source cleanup should happen in the workbook rather than generated JSON.
 
 ## Design decisions and rationale
 
-- **Spreadsheets remain the schedule source of truth.** Nontechnical operators can update existing files without editing JavaScript. Generated `data/routes.json` is committed so the site can be served without rebuilding in deployment-like environments.
+- **The consolidated spreadsheet is the schedule source of truth.** Nontechnical operators can update `All-route-stops.xls` without editing JavaScript. Generated `data/routes.json` is committed so the site can be served without rebuilding in deployment-like environments.
 - **Static architecture.** Vanilla browser code and a tiny Node server keep installation and operation simple. There is no API, authentication, database, or framework build step.
 - **Candidate-first location model.** Google Maps research is kept in a separate candidate file and loaded as pending review. `route-overrides.json` has final precedence for carefully supplied coordinates, while Nominatim is a fallback. This avoids implying that automated or researched matches are verified pickup points.
 - **Privacy-aware build option.** `npm run build:offline` never submits stop names to Nominatim. The online build includes each unresolved name and `ROUTE_LOCATION_CONTEXT` in external requests, uses an India country filter, an eight-second timeout, and a 1.1-second delay.
@@ -44,7 +33,7 @@ The source spreadsheets also contain duplicate and non-contiguous sequence numbe
 
 ## Known limitations and risks
 
-- Sixteen stops cannot be placed during an offline build, and ambiguous/low-confidence candidates remain across the mapped set.
+- Stops without entries in the candidate, override, or cache files cannot be placed during an offline build, and ambiguous/low-confidence candidates remain across the mapped set.
 - Review exports are not consumed by the build. A human must deliberately translate approved coordinates into `route-overrides.json` (or another future persistence/import mechanism).
 - Review state is browser- and origin-specific; clearing site storage, changing ports/origins, or moving computers loses it unless it was exported.
 - Online builds depend on Nominatim availability and policy, and map display depends on OpenStreetMap tile availability. No offline tile set is included.
@@ -60,23 +49,24 @@ The source spreadsheets also contain duplicate and non-contiguous sequence numbe
 - `scripts/serve.mjs`: static server, MIME types, and `PORT` handling.
 - `route-overrides.json`: 9 current higher-priority entries, including the school.
 - `google-maps-candidates.json`: 107 current exact-name candidate entries.
+- `All-route-stops.xls`: consolidated schedule source for every route and worksheet.
 - `.route-geocode-cache.json`: local ignored cache; currently not part of shared project state.
 - `data/routes.json`: committed generated output loaded by the browser.
 - Browser `localStorage`: review records under `route-map-location-reviews-v1`.
 
 ## Verified commands
 
-On 2026-09-22, with Node 25.8.1 and installed lockfile dependencies:
+On 2026-09-30, with Node 25.8.1 and installed lockfile dependencies:
 
-- `npm run build:offline` rebuilt 12 routes, mapped 127/143 records, reported the 16 names above, and produced no tracked diff.
+- `npm run build:offline` rebuilt 29 routes from `All-route-stops.xls`, mapped 145/238 records, reported 93 unresolved records, and confirmed the generated data contains the school as the final stop of every route.
 - `node --check` passed for `app.js`, `scripts/build-routes.mjs`, and `scripts/serve.mjs`.
-- A fresh server on port 4174 returned HTTP 200 for `/` and `/data/routes.json`; the JSON response contained 12 routes. Port 4173 was already occupied by another process at verification time and also served the expected app/data.
+- A fresh server on port 4174 returned HTTP 200 for `/` and `/data/routes.json`; the JSON response contained 29 routes, 238 route-stop records, a shared `All-route-stops.xls` source, and the school as every route's final stop.
 
 There are no `test` or `lint` npm scripts, so do not claim those checks have run.
 
 ## Suggested next steps
 
-1. Resolve the 16 missing stops with human-verified coordinates and add exact-name entries to `route-overrides.json` (or to the candidate file if they are still provisional).
+1. Resolve the 93 unmapped route-stop records with human-reviewed coordinates and add exact-name entries to `route-overrides.json` (or to the candidate file if they are still provisional).
 2. Review low- and medium-confidence candidates in the UI, export the decisions, and establish a deliberate reconciliation process for approved exports.
 3. Correct duplicate/non-contiguous sequences in the source workbooks after confirming the intended pickup order, then regenerate and inspect `data/routes.json`.
 4. Add focused automated tests for time normalization, source precedence, workbook parsing, school placement, exact-name behavior, and path traversal rejection.
@@ -85,4 +75,4 @@ There are no `test` or `lint` npm scripts, so do not claim those checks have run
 
 ## Assumptions and uncertainty
 
-No prior conversation history beyond the request to create this handoff was available in this session. “Currently working on” is therefore inferred from the checked-in review UI, candidate files, unresolved records, and repository timestamps—not from an explicit roadmap. No hosting target, production environment, required Node version, ownership model for location approval, or intended treatment of duplicate sequences is documented in the repository.
+No hosting target, production environment, required Node version, ownership model for location approval, or intended treatment of duplicate sequences is documented in the repository.
