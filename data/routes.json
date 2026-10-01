@@ -452,11 +452,11 @@
         "stopName": "Vallabhgram",
         "pickupTime": "06:50",
         "dropTime": "14:15",
-        "lat": null,
-        "lng": null,
-        "locationSource": "unresolved",
-        "locationConfidence": "unresolved",
-        "locationNote": ""
+        "lat": 27.7742339,
+        "lng": 76.6445201,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "medium",
+        "locationNote": "Google Maps place: Vallabhgram, Rajasthan 301404; village center, confirm pickup point"
       },
       {
         "sequence": 11,
@@ -754,11 +754,11 @@
         "stopName": "Scheme No. 1",
         "pickupTime": "07:03",
         "dropTime": "13:58",
-        "lat": null,
-        "lng": null,
-        "locationSource": "unresolved",
-        "locationConfidence": "unresolved",
-        "locationNote": ""
+        "lat": 27.5728053,
+        "lng": 76.6098144,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "medium",
+        "locationNote": "Google Maps place: Scheme No 1, Alwar; neighborhood center, confirm pickup point"
       },
       {
         "sequence": 13,
@@ -1679,11 +1679,11 @@
         "stopName": "Tatarpur",
         "pickupTime": "06:25",
         "dropTime": "14:25",
-        "lat": null,
-        "lng": null,
-        "locationSource": "unresolved",
-        "locationConfidence": "unresolved",
-        "locationNote": ""
+        "lat": 27.7906685,
+        "lng": 76.5083562,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "medium",
+        "locationNote": "Google Maps place: Tatarpur, Rajasthan; village center, confirm pickup point"
       },
       {
         "sequence": 1,
@@ -1701,33 +1701,33 @@
         "stopName": "Behroj",
         "pickupTime": "06:35",
         "dropTime": "14:15",
-        "lat": null,
-        "lng": null,
-        "locationSource": "unresolved",
-        "locationConfidence": "unresolved",
-        "locationNote": ""
+        "lat": 27.7354412,
+        "lng": 76.5314817,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "medium",
+        "locationNote": "Google Maps place: Behroj, Rajasthan 301404; village center, confirm pickup point"
       },
       {
         "sequence": 3,
         "stopName": "Chandoli (Roja Ka Bas)",
         "pickupTime": "07:10",
         "dropTime": "14:20",
-        "lat": null,
-        "lng": null,
-        "locationSource": "unresolved",
-        "locationConfidence": "unresolved",
-        "locationNote": ""
+        "lat": 27.7046265,
+        "lng": 76.5736264,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "low",
+        "locationNote": "Google Maps place: government school Roja ka bass near Chandauli; exact pickup needs confirmation"
       },
       {
         "sequence": 3,
         "stopName": "Jindoli",
         "pickupTime": "06:40",
         "dropTime": "14:10",
-        "lat": null,
-        "lng": null,
-        "locationSource": "unresolved",
-        "locationConfidence": "unresolved",
-        "locationNote": ""
+        "lat": 27.734117,
+        "lng": 76.5618277,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "medium",
+        "locationNote": "Google Maps place: Jindoli, Rajasthan 301404; village center, confirm pickup point"
       },
       {
         "sequence": 4,
@@ -1767,11 +1767,11 @@
         "stopName": "Dehra",
         "pickupTime": "07:20",
         "dropTime": "13:40",
-        "lat": null,
-        "lng": null,
-        "locationSource": "unresolved",
-        "locationConfidence": "unresolved",
-        "locationNote": ""
+        "lat": 27.6510879,
+        "lng": 76.5806097,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "medium",
+        "locationNote": "Google Maps place: Dehra, Rajasthan 301023; village center, confirm pickup point"
       },
       {
         "sequence": 7,
@@ -1893,33 +1893,33 @@
         "stopName": "Bala Dehra",
         "pickupTime": "06:30",
         "dropTime": "14:10",
-        "lat": null,
-        "lng": null,
-        "locationSource": "unresolved",
-        "locationConfidence": "unresolved",
-        "locationNote": ""
+        "lat": 27.6499538,
+        "lng": 76.5690519,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "medium",
+        "locationNote": "Google Maps place: Bala Dahra, Rajasthan 301023; spelling differs, confirm pickup point"
       },
       {
         "sequence": 2,
         "stopName": "Hajipur",
         "pickupTime": "06:45",
         "dropTime": "13:55",
-        "lat": null,
-        "lng": null,
-        "locationSource": "unresolved",
-        "locationConfidence": "unresolved",
-        "locationNote": ""
+        "lat": 27.6237691,
+        "lng": 76.5661622,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "medium",
+        "locationNote": "Google Maps place: Hajipur, Rajasthan; village center, confirm pickup point"
       },
       {
         "sequence": 3,
         "stopName": "Mangalbas",
         "pickupTime": "06:55",
         "dropTime": "13:50",
-        "lat": null,
-        "lng": null,
-        "locationSource": "unresolved",
-        "locationConfidence": "unresolved",
-        "locationNote": ""
+        "lat": 27.6364125,
+        "lng": 76.5705469,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "medium",
+        "locationNote": "Google Maps place: MANGALBAS near Dehra and Hajipur; confirm pickup point"
       },
       {
         "sequence": 4,
@@ -1956,11 +1956,11 @@
         "stopName": "Shahpur",
         "pickupTime": "06:40",
         "dropTime": "14:11",
-        "lat": null,
-        "lng": null,
-        "locationSource": "unresolved",
-        "locationConfidence": "unresolved",
-        "locationNote": ""
+        "lat": 27.6656414,
+        "lng": 76.5719901,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "medium",
+        "locationNote": "Google Maps place: Shahpur, Rajasthan 301023; village center, confirm pickup point"
       },
       {
         "sequence": 1,
@@ -2030,11 +2030,11 @@
         "stopName": "Lodhari - II",
         "pickupTime": "06:50",
         "dropTime": "14:10",
-        "lat": null,
-        "lng": null,
-        "locationSource": "unresolved",
-        "locationConfidence": "unresolved",
-        "locationNote": ""
+        "lat": 27.6642984,
+        "lng": 76.5979445,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "low",
+        "locationNote": "Google Maps place: Lodhari, Rajasthan 301023; village center only, distinct second pickup needs confirmation"
       },
       {
         "sequence": 3,
@@ -2060,11 +2060,11 @@
         "stopName": "Lodhari I",
         "pickupTime": "07:00",
         "dropTime": "14:00",
-        "lat": null,
-        "lng": null,
-        "locationSource": "unresolved",
-        "locationConfidence": "unresolved",
-        "locationNote": ""
+        "lat": 27.6642984,
+        "lng": 76.5979445,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "low",
+        "locationNote": "Google Maps place: Lodhari, Rajasthan 301023; village center only, exact first pickup needs confirmation"
       },
       {
         "sequence": 2,
@@ -2090,11 +2090,11 @@
         "stopName": "Jagta Basai",
         "pickupTime": "06:00",
         "dropTime": "14:30",
-        "lat": null,
-        "lng": null,
-        "locationSource": "unresolved",
-        "locationConfidence": "unresolved",
-        "locationNote": ""
+        "lat": 27.6881174,
+        "lng": 76.6354952,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "medium",
+        "locationNote": "Google Maps place: Basai Jagta, Rajasthan 301023; name order differs, confirm pickup point"
       },
       {
         "sequence": 2,
@@ -2161,11 +2161,11 @@
         "stopName": "Ambedkar Circle",
         "pickupTime": "06:30",
         "dropTime": "14:05",
-        "lat": null,
-        "lng": null,
-        "locationSource": "unresolved",
-        "locationConfidence": "unresolved",
-        "locationNote": ""
+        "lat": 27.5730617,
+        "lng": 76.6140313,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: Ambedkar Circle, Alwar"
       },
       {
         "sequence": 1,
@@ -2320,11 +2320,11 @@
         "stopName": "Vikas Path",
         "pickupTime": "06:35",
         "dropTime": "14:25",
-        "lat": null,
-        "lng": null,
-        "locationSource": "unresolved",
-        "locationConfidence": "unresolved",
-        "locationNote": ""
+        "lat": 27.5704225,
+        "lng": 76.6047955,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "medium",
+        "locationNote": "Google Maps place: Vikas Path, Alwar; road point, confirm pickup point"
       },
       {
         "sequence": 1,
@@ -2523,11 +2523,11 @@
         "stopName": "Ranjeet Nagar",
         "pickupTime": "06:34",
         "dropTime": "14:26",
-        "lat": null,
-        "lng": null,
-        "locationSource": "unresolved",
-        "locationConfidence": "unresolved",
-        "locationNote": ""
+        "lat": 27.5813315,
+        "lng": 76.632607,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "medium",
+        "locationNote": "Google Maps place: Ranjeet Nagar, Daudpur, Alwar; neighborhood center, confirm pickup point"
       },
       {
         "sequence": 2,
@@ -2600,11 +2600,11 @@
         "stopName": "Transport Nagar",
         "pickupTime": "06:56",
         "dropTime": "14:04",
-        "lat": null,
-        "lng": null,
-        "locationSource": "unresolved",
-        "locationConfidence": "unresolved",
-        "locationNote": ""
+        "lat": 27.5840045,
+        "lng": 76.6404087,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "medium",
+        "locationNote": "Google Maps place: Transport Nagar, Alwar; area point, confirm pickup point"
       },
       {
         "sequence": 9,
@@ -2693,22 +2693,22 @@
         "stopName": "Jail Circle",
         "pickupTime": "06:51",
         "dropTime": "01:59",
-        "lat": null,
-        "lng": null,
-        "locationSource": "unresolved",
-        "locationConfidence": "unresolved",
-        "locationNote": ""
+        "lat": 27.5803083,
+        "lng": 76.6148131,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "high",
+        "locationNote": "Google Maps place: Jail Circle, Alwar"
       },
       {
         "sequence": 1,
         "stopName": "Karamchari Colony",
         "pickupTime": "06:51",
         "dropTime": "01:53",
-        "lat": null,
-        "lng": null,
-        "locationSource": "unresolved",
-        "locationConfidence": "unresolved",
-        "locationNote": ""
+        "lat": 27.5841001,
+        "lng": 76.6167212,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "medium",
+        "locationNote": "Google Maps place: Karamchari Colony, Alwar; neighborhood center, confirm pickup point"
       },
       {
         "sequence": 2,
@@ -2756,11 +2756,11 @@
         "stopName": "Dilawarpur",
         "pickupTime": "06:35",
         "dropTime": "13:52",
-        "lat": null,
-        "lng": null,
-        "locationSource": "unresolved",
-        "locationConfidence": "unresolved",
-        "locationNote": ""
+        "lat": 27.6678956,
+        "lng": 76.5800875,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "medium",
+        "locationNote": "Google Maps place: Dilawarpur, Rajasthan 301023; village center, confirm pickup point"
       },
       {
         "sequence": 1,
@@ -2808,11 +2808,11 @@
         "stopName": "Ghatla - Route 29",
         "pickupTime": "07:00",
         "dropTime": "14:00",
-        "lat": null,
-        "lng": null,
-        "locationSource": "unresolved",
-        "locationConfidence": "unresolved",
-        "locationNote": ""
+        "lat": 27.733024,
+        "lng": 76.6239423,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "medium",
+        "locationNote": "Google Maps place: Ghatla, Rajasthan; village center, confirm pickup point"
       },
       {
         "sequence": 2,

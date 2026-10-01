@@ -17,7 +17,7 @@ Completed functionality:
 
 ## Current work and known data gaps
 
-The active work is candidate-location validation. The offline build maps 145 of 238 route-stop records and leaves 93 unresolved, mostly among Routes 13–29 added by the consolidated workbook. The mapped records include 96 high-, 2 medium-high-, 29 medium-, and 18 low-confidence candidates. Confidence is descriptive metadata, not a human confirmation.
+The active work is candidate-location validation. The offline build maps 167 of 238 route-stop records and leaves 71 unresolved, mostly among Routes 13–29 added by the consolidated workbook. The newest additions are 22 pending Google Maps candidates for exact spreadsheet names, including Route 13 villages, the Dehra/Shahpur cluster, and Alwar landmarks. Several are village or neighborhood centers rather than exact pickup points. Confidence is descriptive metadata, not a human confirmation.
 
 The source spreadsheets also contain duplicate and non-contiguous sequence numbers (for example, multiple routes have two sequence `1` entries). The build preserves these values and sorts by them; it does not repair source numbering. Because browser review keys include route ID, sequence, and stop name, identical sequence numbers are safe when names differ, but source cleanup should happen in the workbook rather than generated JSON.
 
@@ -48,7 +48,7 @@ The source spreadsheets also contain duplicate and non-contiguous sequence numbe
 - `scripts/build-routes.mjs`: workbook schema, default location context, geocoding policy, source precedence, school-appending rule, and generated outputs.
 - `scripts/serve.mjs`: static server, MIME types, and `PORT` handling.
 - `route-overrides.json`: 9 current higher-priority entries, including the school.
-- `google-maps-candidates.json`: 107 current exact-name candidate entries.
+- `google-maps-candidates.json`: 129 current exact-name candidate entries.
 - `All-route-stops.xls`: consolidated schedule source for every route and worksheet.
 - `.route-geocode-cache.json`: local ignored cache; currently not part of shared project state.
 - `data/routes.json`: committed generated output loaded by the browser.
@@ -62,11 +62,13 @@ On 2026-09-30, with Node 25.8.1 and installed lockfile dependencies:
 - `node --check` passed for `app.js`, `scripts/build-routes.mjs`, and `scripts/serve.mjs`.
 - A fresh server on port 4174 returned HTTP 200 for `/` and `/data/routes.json`; the JSON response contained 29 routes, 238 route-stop records, a shared `All-route-stops.xls` source, and the school as every route's final stop.
 
+On 2026-10-01, `npm run build:offline` mapped 167 of 238 records and preserved the school as the final stop of every route. `node --check` passed for all three JavaScript entry points. A fresh server on port 4175 returned HTTP 200 for `/` and `/data/routes.json`.
+
 There are no `test` or `lint` npm scripts, so do not claim those checks have run.
 
 ## Suggested next steps
 
-1. Resolve the 93 unmapped route-stop records with human-reviewed coordinates and add exact-name entries to `route-overrides.json` (or to the candidate file if they are still provisional).
+1. Resolve the 71 unmapped route-stop records with human-reviewed coordinates and add exact-name entries to `route-overrides.json` (or to the candidate file if they are still provisional). Route 13's Soraka, Dalalpur, and Nagli did not have a sufficiently clear Google Maps match in the latest pass; avoid assuming the nearest similarly named village is correct.
 2. Review low- and medium-confidence candidates in the UI, export the decisions, and establish a deliberate reconciliation process for approved exports.
 3. Correct duplicate/non-contiguous sequences in the source workbooks after confirming the intended pickup order, then regenerate and inspect `data/routes.json`.
 4. Add focused automated tests for time normalization, source precedence, workbook parsing, school placement, exact-name behavior, and path traversal rejection.

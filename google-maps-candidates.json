@@ -115,5 +115,29 @@
   "Budh Vihar Block E II": { "lat": 27.5966568, "lng": 76.6089605, "confidence": "medium", "source": "google-maps-review-candidate", "note": "Google Maps E-94 representative point for E Block" },
   "Budh Vihar Block A II": { "lat": 27.597684, "lng": 76.610545, "confidence": "medium", "source": "google-maps-review-candidate", "note": "Google Maps A-82 representative point for A Block" },
   "Ganesh nagar": { "lat": 27.5998868, "lng": 76.6074264, "confidence": "high", "source": "google-maps-review-candidate", "note": "Google Maps place: Ganesh Nagar" },
-  "Budh Vihar Extention": { "lat": 27.5947694, "lng": 76.6080554, "confidence": "low", "source": "google-maps-review-candidate", "note": "Google Maps Budh Vihar center; extension boundary needs confirmation" }
+  "Budh Vihar Extention": { "lat": 27.5947694, "lng": 76.6080554, "confidence": "low", "source": "google-maps-review-candidate", "note": "Google Maps Budh Vihar center; extension boundary needs confirmation" },
+
+  "Vallabhgram": { "lat": 27.7742339, "lng": 76.6445201, "confidence": "medium", "source": "google-maps-review-candidate", "note": "Google Maps place: Vallabhgram, Rajasthan 301404; village center, confirm pickup point" },
+  "Tatarpur": { "lat": 27.7906685, "lng": 76.5083562, "confidence": "medium", "source": "google-maps-review-candidate", "note": "Google Maps place: Tatarpur, Rajasthan; village center, confirm pickup point" },
+  "Behroj": { "lat": 27.7354412, "lng": 76.5314817, "confidence": "medium", "source": "google-maps-review-candidate", "note": "Google Maps place: Behroj, Rajasthan 301404; village center, confirm pickup point" },
+  "Chandoli (Roja Ka Bas)": { "lat": 27.7046265, "lng": 76.5736264, "confidence": "low", "source": "google-maps-review-candidate", "note": "Google Maps place: government school Roja ka bass near Chandauli; exact pickup needs confirmation" },
+  "Jindoli": { "lat": 27.734117, "lng": 76.5618277, "confidence": "medium", "source": "google-maps-review-candidate", "note": "Google Maps place: Jindoli, Rajasthan 301404; village center, confirm pickup point" },
+  "Dehra": { "lat": 27.6510879, "lng": 76.5806097, "confidence": "medium", "source": "google-maps-review-candidate", "note": "Google Maps place: Dehra, Rajasthan 301023; village center, confirm pickup point" },
+  "Bala Dehra": { "lat": 27.6499538, "lng": 76.5690519, "confidence": "medium", "source": "google-maps-review-candidate", "note": "Google Maps place: Bala Dahra, Rajasthan 301023; spelling differs, confirm pickup point" },
+  "Hajipur": { "lat": 27.6237691, "lng": 76.5661622, "confidence": "medium", "source": "google-maps-review-candidate", "note": "Google Maps place: Hajipur, Rajasthan; village center, confirm pickup point" },
+  "Mangalbas": { "lat": 27.6364125, "lng": 76.5705469, "confidence": "medium", "source": "google-maps-review-candidate", "note": "Google Maps place: MANGALBAS near Dehra and Hajipur; confirm pickup point" },
+  "Shahpur": { "lat": 27.6656414, "lng": 76.5719901, "confidence": "medium", "source": "google-maps-review-candidate", "note": "Google Maps place: Shahpur, Rajasthan 301023; village center, confirm pickup point" },
+
+  "Ambedkar Circle": { "lat": 27.5730617, "lng": 76.6140313, "confidence": "high", "source": "google-maps-review-candidate", "note": "Google Maps place: Ambedkar Circle, Alwar" },
+  "Scheme No. 1": { "lat": 27.5728053, "lng": 76.6098144, "confidence": "medium", "source": "google-maps-review-candidate", "note": "Google Maps place: Scheme No 1, Alwar; neighborhood center, confirm pickup point" },
+  "Vikas Path": { "lat": 27.5704225, "lng": 76.6047955, "confidence": "medium", "source": "google-maps-review-candidate", "note": "Google Maps place: Vikas Path, Alwar; road point, confirm pickup point" },
+  "Jail Circle": { "lat": 27.5803083, "lng": 76.6148131, "confidence": "high", "source": "google-maps-review-candidate", "note": "Google Maps place: Jail Circle, Alwar" },
+  "Ranjeet Nagar": { "lat": 27.5813315, "lng": 76.632607, "confidence": "medium", "source": "google-maps-review-candidate", "note": "Google Maps place: Ranjeet Nagar, Daudpur, Alwar; neighborhood center, confirm pickup point" },
+  "Transport Nagar": { "lat": 27.5840045, "lng": 76.6404087, "confidence": "medium", "source": "google-maps-review-candidate", "note": "Google Maps place: Transport Nagar, Alwar; area point, confirm pickup point" },
+  "Karamchari Colony": { "lat": 27.5841001, "lng": 76.6167212, "confidence": "medium", "source": "google-maps-review-candidate", "note": "Google Maps place: Karamchari Colony, Alwar; neighborhood center, confirm pickup point" },
+  "Dilawarpur": { "lat": 27.6678956, "lng": 76.5800875, "confidence": "medium", "source": "google-maps-review-candidate", "note": "Google Maps place: Dilawarpur, Rajasthan 301023; village center, confirm pickup point" },
+  "Ghatla - Route 29": { "lat": 27.733024, "lng": 76.6239423, "confidence": "medium", "source": "google-maps-review-candidate", "note": "Google Maps place: Ghatla, Rajasthan; village center, confirm pickup point" },
+  "Jagta Basai": { "lat": 27.6881174, "lng": 76.6354952, "confidence": "medium", "source": "google-maps-review-candidate", "note": "Google Maps place: Basai Jagta, Rajasthan 301023; name order differs, confirm pickup point" },
+  "Lodhari I": { "lat": 27.6642984, "lng": 76.5979445, "confidence": "low", "source": "google-maps-review-candidate", "note": "Google Maps place: Lodhari, Rajasthan 301023; village center only, exact first pickup needs confirmation" },
+  "Lodhari - II": { "lat": 27.6642984, "lng": 76.5979445, "confidence": "low", "source": "google-maps-review-candidate", "note": "Google Maps place: Lodhari, Rajasthan 301023; village center only, distinct second pickup needs confirmation" }
 }
