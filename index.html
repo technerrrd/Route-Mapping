@@ -31,6 +31,17 @@
           <div class="summary-stats" id="routeStats"></div>
         </div>
         <div id="map" role="application" aria-label="Map with route stops"></div>
+        <form class="point-editor" id="pointEditor" novalidate hidden>
+          <strong id="pointEditorTitle">Place stop</strong>
+          <p>Click the map to place a point, or enter coordinates below. Drag the preview marker to fine-tune it.</p>
+          <label>Latitude <input id="pointLatitude" type="number" min="-90" max="90" step="any" inputmode="decimal" required /></label>
+          <label>Longitude <input id="pointLongitude" type="number" min="-180" max="180" step="any" inputmode="decimal" required /></label>
+          <p class="point-error" id="pointEditorError" role="alert" hidden></p>
+          <div class="point-editor-actions">
+            <button type="submit">Save candidate</button>
+            <button id="cancelPointEdit" type="button">Cancel</button>
+          </div>
+        </form>
         <div class="map-message" id="mapMessage" hidden></div>
         <div class="stop-rail-wrap">
           <button class="rail-button" id="previousStop" aria-label="Previous stop">‹</button>

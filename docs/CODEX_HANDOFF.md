@@ -10,16 +10,17 @@ Completed functionality:
 - The generated dataset contains 29 routes, 238 route-stop records, and 209 unique stop names. This includes V.L Memorial Public School appended as the final stop of every route.
 - Pickup/drop values are normalized, routes and stops are ordered, and route metadata records the source workbook.
 - Candidate coordinates come from `google-maps-candidates.json`, higher-priority `route-overrides.json`, the ignored Nominatim cache, or an online Nominatim lookup.
-- The responsive browser UI supports route selection, schedule tables, numbered Leaflet markers, candidate confidence/notes, direct route polylines, stop navigation, confirmation/denial, coordinate adjustment, and JSON review export.
-- Review state persists in the current browser via `localStorage`.
+- The responsive browser UI supports route selection, schedule tables, numbered Leaflet markers, candidate confidence/notes, direct route polylines, stop navigation, confirmation/denial, map-click coordinate placement with draggable preview and optional numeric entry, per-stop restore of up to 20 earlier saves, and JSON review export.
+- Review state persists in the current browser via `localStorage`. Earlier saves use a separate `route-map-location-review-history-v1` key so existing review records keep their schema.
 - Leaflet JS/CSS/images are copied from `node_modules` and committed under `vendor/`; map tiles remain remote OpenStreetMap resources.
 - A dependency-free Node static server handles local use and rejects paths outside the repository root.
 
 ## Current work and known data gaps
 
-The active work is candidate-location validation. The offline build maps 167 of 238 route-stop records and leaves 71 unresolved, mostly among Routes 13–29 added by the consolidated workbook. The newest additions are 22 pending Google Maps candidates for exact spreadsheet names, including Route 13 villages, the Dehra/Shahpur cluster, and Alwar landmarks. Several are village or neighborhood centers rather than exact pickup points. Confidence is descriptive metadata, not a human confirmation.
+The active work is candidate-location validation. The offline build maps 171 of 238 route-stop records and leaves 67 unresolved, mostly among Routes 13–29 added by the consolidated workbook. The newest additions are 26 pending Google Maps candidates for exact spreadsheet names, including Route 13 villages, the Dehra/Shahpur cluster, Alwar landmarks, and all four previously unresolved Route 26 stops. Several are village or neighborhood centers rather than exact pickup points. Confidence is descriptive metadata, not a human confirmation.
 
 The source spreadsheets also contain duplicate and non-contiguous sequence numbers (for example, multiple routes have two sequence `1` entries). The build preserves these values and sorts by them; it does not repair source numbering. Because browser review keys include route ID, sequence, and stop name, identical sequence numbers are safe when names differ, but source cleanup should happen in the workbook rather than generated JSON.
+The browser labels markers, stop cards, and schedule rows consecutively from 1 in their displayed order. These display numbers are separate from the source sequence used in review keys and exports.
 
 ## Design decisions and rationale
 
@@ -35,7 +36,7 @@ The source spreadsheets also contain duplicate and non-contiguous sequence numbe
 
 - Stops without entries in the candidate, override, or cache files cannot be placed during an offline build, and ambiguous/low-confidence candidates remain across the mapped set.
 - Review exports are not consumed by the build. A human must deliberately translate approved coordinates into `route-overrides.json` (or another future persistence/import mechanism).
-- Review state is browser- and origin-specific; clearing site storage, changing ports/origins, or moving computers loses it unless it was exported.
+- Review state and restore history are browser- and origin-specific; clearing site storage, changing ports/origins, or moving computers loses them. Review exports contain current values, not the local restore history.
 - Online builds depend on Nominatim availability and policy, and map display depends on OpenStreetMap tile availability. No offline tile set is included.
 - The app shows candidate markers even when denied, although denied points are excluded from the route polyline. Map bounds are computed from all mapped candidates, including denied ones.
 - There is no automated test suite, linter, CI configuration, production deployment configuration, or pinned Node version.
@@ -48,11 +49,12 @@ The source spreadsheets also contain duplicate and non-contiguous sequence numbe
 - `scripts/build-routes.mjs`: workbook schema, default location context, geocoding policy, source precedence, school-appending rule, and generated outputs.
 - `scripts/serve.mjs`: static server, MIME types, and `PORT` handling.
 - `route-overrides.json`: 9 current higher-priority entries, including the school.
-- `google-maps-candidates.json`: 129 current exact-name candidate entries.
+- `google-maps-candidates.json`: 133 current exact-name candidate entries.
 - `All-route-stops.xls`: consolidated schedule source for every route and worksheet.
 - `.route-geocode-cache.json`: local ignored cache; currently not part of shared project state.
 - `data/routes.json`: committed generated output loaded by the browser.
 - Browser `localStorage`: review records under `route-map-location-reviews-v1`.
+- Browser `localStorage`: up to 20 earlier saved values per stop under `route-map-location-review-history-v1`.
 
 ## Verified commands
 
@@ -63,12 +65,13 @@ On 2026-09-30, with Node 25.8.1 and installed lockfile dependencies:
 - A fresh server on port 4174 returned HTTP 200 for `/` and `/data/routes.json`; the JSON response contained 29 routes, 238 route-stop records, a shared `All-route-stops.xls` source, and the school as every route's final stop.
 
 On 2026-10-01, `npm run build:offline` mapped 167 of 238 records and preserved the school as the final stop of every route. `node --check` passed for all three JavaScript entry points. A fresh server on port 4175 returned HTTP 200 for `/` and `/data/routes.json`.
+Later on 2026-10-01, the offline build mapped 171 of 238 records after four provisional Route 26 points were added. All five Route 26 stops, including the final school, now have candidate coordinates.
 
 There are no `test` or `lint` npm scripts, so do not claim those checks have run.
 
 ## Suggested next steps
 
-1. Resolve the 71 unmapped route-stop records with human-reviewed coordinates and add exact-name entries to `route-overrides.json` (or to the candidate file if they are still provisional). Route 13's Soraka, Dalalpur, and Nagli did not have a sufficiently clear Google Maps match in the latest pass; avoid assuming the nearest similarly named village is correct.
+1. Resolve the 67 unmapped route-stop records with human-reviewed coordinates and add exact-name entries to `route-overrides.json` (or to the candidate file if they are still provisional). Route 13's Soraka, Dalalpur, and Nagli did not have a sufficiently clear Google Maps match in the latest pass; avoid assuming the nearest similarly named village is correct.
 2. Review low- and medium-confidence candidates in the UI, export the decisions, and establish a deliberate reconciliation process for approved exports.
 3. Correct duplicate/non-contiguous sequences in the source workbooks after confirming the intended pickup order, then regenerate and inspect `data/routes.json`.
 4. Add focused automated tests for time normalization, source precedence, workbook parsing, school placement, exact-name behavior, and path traversal rejection.

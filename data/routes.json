@@ -2630,44 +2630,44 @@
         "stopName": "Vijay nagar",
         "pickupTime": "06:55",
         "dropTime": "14:05",
-        "lat": null,
-        "lng": null,
-        "locationSource": "unresolved",
-        "locationConfidence": "unresolved",
-        "locationNote": ""
+        "lat": 27.5835358,
+        "lng": 76.6109441,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "medium",
+        "locationNote": "Google Maps place: Vijay Nagar, Alwar; neighborhood point, confirm the Route 26 pickup corner"
       },
       {
         "sequence": 1,
         "stopName": "EWS QTR",
         "pickupTime": "06:45",
         "dropTime": "14:15",
-        "lat": null,
-        "lng": null,
-        "locationSource": "unresolved",
-        "locationConfidence": "unresolved",
-        "locationNote": ""
+        "lat": 27.5933577,
+        "lng": 76.6070789,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "low",
+        "locationNote": "Google Maps place: Gf 86, Ews Quarter near HKM ITI, Budhvihar; representative area point, confirm the Route 26 pickup"
       },
       {
         "sequence": 2,
         "stopName": "Budh Vihar Block B V",
         "pickupTime": "06:50",
         "dropTime": "14:10",
-        "lat": null,
-        "lng": null,
-        "locationSource": "unresolved",
-        "locationConfidence": "unresolved",
-        "locationNote": ""
+        "lat": 27.5916647,
+        "lng": 76.6131105,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "low",
+        "locationNote": "Google Maps place: B Block, Budhvihar; block center only, distinct fifth pickup needs confirmation"
       },
       {
         "sequence": 3,
         "stopName": "Budh Vihar Block A",
         "pickupTime": "07:00",
         "dropTime": "14:00",
-        "lat": null,
-        "lng": null,
-        "locationSource": "unresolved",
-        "locationConfidence": "unresolved",
-        "locationNote": ""
+        "lat": 27.597684,
+        "lng": 76.610545,
+        "locationSource": "google-maps-review-candidate",
+        "locationConfidence": "low",
+        "locationNote": "Google Maps place: A-82 Budh Vihar; representative A Block point, confirm the Route 26 pickup"
       },
       {
         "sequence": 4,

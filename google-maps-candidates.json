@@ -139,5 +139,10 @@
   "Ghatla - Route 29": { "lat": 27.733024, "lng": 76.6239423, "confidence": "medium", "source": "google-maps-review-candidate", "note": "Google Maps place: Ghatla, Rajasthan; village center, confirm pickup point" },
   "Jagta Basai": { "lat": 27.6881174, "lng": 76.6354952, "confidence": "medium", "source": "google-maps-review-candidate", "note": "Google Maps place: Basai Jagta, Rajasthan 301023; name order differs, confirm pickup point" },
   "Lodhari I": { "lat": 27.6642984, "lng": 76.5979445, "confidence": "low", "source": "google-maps-review-candidate", "note": "Google Maps place: Lodhari, Rajasthan 301023; village center only, exact first pickup needs confirmation" },
-  "Lodhari - II": { "lat": 27.6642984, "lng": 76.5979445, "confidence": "low", "source": "google-maps-review-candidate", "note": "Google Maps place: Lodhari, Rajasthan 301023; village center only, distinct second pickup needs confirmation" }
+  "Lodhari - II": { "lat": 27.6642984, "lng": 76.5979445, "confidence": "low", "source": "google-maps-review-candidate", "note": "Google Maps place: Lodhari, Rajasthan 301023; village center only, distinct second pickup needs confirmation" },
+
+  "Vijay nagar": { "lat": 27.5835358, "lng": 76.6109441, "confidence": "medium", "source": "google-maps-review-candidate", "note": "Google Maps place: Vijay Nagar, Alwar; neighborhood point, confirm the Route 26 pickup corner" },
+  "EWS QTR": { "lat": 27.5933577, "lng": 76.6070789, "confidence": "low", "source": "google-maps-review-candidate", "note": "Google Maps place: Gf 86, Ews Quarter near HKM ITI, Budhvihar; representative area point, confirm the Route 26 pickup" },
+  "Budh Vihar Block B V": { "lat": 27.5916647, "lng": 76.6131105, "confidence": "low", "source": "google-maps-review-candidate", "note": "Google Maps place: B Block, Budhvihar; block center only, distinct fifth pickup needs confirmation" },
+  "Budh Vihar Block A": { "lat": 27.597684, "lng": 76.610545, "confidence": "low", "source": "google-maps-review-candidate", "note": "Google Maps place: A-82 Budh Vihar; representative A Block point, confirm the Route 26 pickup" }
 }

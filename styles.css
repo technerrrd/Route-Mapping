@@ -121,6 +121,32 @@ h2 {
 }
 
 #map { height: 650px; }
+#map.point-picking { cursor: crosshair; }
+#map.point-picking .leaflet-container { cursor: crosshair; }
+
+.point-editor {
+  position: absolute;
+  z-index: 700;
+  top: 96px;
+  right: 18px;
+  display: grid;
+  gap: 10px;
+  width: min(320px, calc(100% - 36px));
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255, 253, 247, .97);
+  box-shadow: var(--shadow);
+}
+.point-editor[hidden] { display: none; }
+.point-editor strong { line-height: 1.2; }
+.point-editor p { margin: 0; color: var(--muted); font-size: .85rem; }
+.point-editor label { display: grid; gap: 4px; color: var(--muted); font-size: .8rem; }
+.point-editor input { width: 100%; padding: 9px; border: 1px solid var(--line); border-radius: 9px; color: var(--ink); background: white; font: inherit; }
+.point-editor .point-error { color: #a54c2e; }
+.point-editor-actions { display: flex; gap: 8px; }
+.point-editor-actions button { padding: 8px 12px; border: 1px solid var(--line); border-radius: 9px; color: var(--ink); background: white; cursor: pointer; }
+.point-editor-actions button[type="submit"] { color: white; border-color: var(--green); background: var(--green); }
 
 .route-summary {
   position: absolute;
@@ -322,6 +348,7 @@ td:first-child { font-weight: 700; }
   .topbar-actions { width: 100%; max-width: 100%; align-items: flex-start; }
   .route-picker { max-width: 100%; width: 100%; }
   .map-panel, #map { min-height: 620px; height: 620px; }
+  .point-editor { top: 148px; right: 10px; width: min(320px, calc(100% - 20px)); }
   .route-summary { right: 14px; left: 14px; align-items: flex-start; flex-direction: column; gap: 8px; }
   .stop-rail-wrap { right: 10px; bottom: 10px; left: 10px; grid-template-columns: 36px minmax(0,1fr) 36px; }
   .rail-button { width: 36px; height: 36px; }
